@@ -6,5 +6,5 @@ permalink: poi
 
 # Poi spinning
 
-Spinning relates staff.
+Spinning and juggling related.
 

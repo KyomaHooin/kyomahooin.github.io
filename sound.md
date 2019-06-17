@@ -4,7 +4,4 @@ layout: home
 permalink: sound
 ---
 
-# Music
-
-DNB, OST, Lounge, Jazz whaterver..
-
+# DNB, Lounge, Jazz, OST..

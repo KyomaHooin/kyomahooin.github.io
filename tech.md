@@ -4,6 +4,5 @@ layout: home
 permalink: tech
 ---
 
-# Tech shit.
+# Pwn2own howto's..
 
-How to break things.

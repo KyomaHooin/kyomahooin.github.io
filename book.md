@@ -4,5 +4,6 @@ layout: home
 permalink: book
 ---
 
-Cyberpunk & Sci-fi.
+# SF & Cyberpunk ..
 
+Little review and rating. 

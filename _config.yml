@@ -6,5 +6,5 @@ header_pages:
   - book.md
   - sound.md
 
-footer: '<a style="text-decoration: none;">&#960</a>'
+footer: '<a href="/" style="text-decoration: none;">&#960</a>'
 
