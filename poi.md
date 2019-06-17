@@ -1,6 +1,6 @@
 ---
 title: Poi
-layout: home
+layout: poi
 permalink: poi
 ---
 
