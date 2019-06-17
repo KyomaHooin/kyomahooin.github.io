@@ -1,6 +1,6 @@
 ---
 title: Sound
-layout: home
+layout: sound
 permalink: sound
 ---
 

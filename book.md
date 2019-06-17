@@ -1,6 +1,6 @@
 ---
 title: Book
-layout: home
+layout: book
 permalink: book
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Tech
-layout: home
+layout: tech
 permalink: tech
 ---
 
