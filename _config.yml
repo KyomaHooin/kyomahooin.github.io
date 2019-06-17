@@ -5,6 +5,7 @@ header_pages:
   - poi.md
   - book.md
   - sound.md
+  - other.md
 
 footer: '<a href="/" style="text-decoration: none;">&#960</a>'
 
