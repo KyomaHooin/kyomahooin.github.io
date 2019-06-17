@@ -1,8 +1,10 @@
 ---
-title: /
+title: About
 layout: home
-permalink: /
+permalink: / 
 ---
 
 # Pesonal Blog
+
+# How am i?
 
