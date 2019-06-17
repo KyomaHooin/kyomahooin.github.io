@@ -2,6 +2,10 @@
 header_pages:
   - index.md
   - about.md
+  - tech.md
+  - poi.md
+  - book.md
+  - sound.md
 
-footer: '<a>pi</a>'
+footer: '<a style="text-decoration: none;">&#982</a>'
 
