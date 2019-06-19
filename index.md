@@ -4,6 +4,5 @@ layout: page
 permalink: / 
 ---
 
-# Pesonal Blog
- 
-宝物
+# 岡部 倫太郎 Pesonal 宝物 Blog
+

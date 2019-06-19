@@ -4,5 +4,5 @@ layout: other
 permalink: other
 ---
 
-# Non-categorised trash ..
+# Rubbish ..
 

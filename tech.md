@@ -4,5 +4,5 @@ layout: tech
 permalink: tech
 ---
 
-# Pwn2own howto's..
+# Pwn2Own, HowTo, Note ..
 
