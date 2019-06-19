@@ -4,7 +4,5 @@ layout: poi
 permalink: poi
 ---
 
-# Poi spinning
-
-Spinning and juggling related.
+# Poi & Realted ..
 
