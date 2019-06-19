@@ -10,8 +10,7 @@ layout: default
     {%- for post in site.tags.book -%}
     <li>
       {%- assign date_format = "%Y-%m-%d %H:%M" -%}
-      [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      {%- if post.rating != '' -%} [{{post.rating}}/10] {%- endif -%}
+      [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>{%- if post.rating != '' -%} [{{post.rating}}/10]{%- endif -%}
     </li>
     {%- endfor -%}
   </ul>
