@@ -9,8 +9,6 @@ TODO:
 - title linebreak
 - random '--'
 - title: ?
-- dup cleanup
-- rating spacing
 - pagination
 - page prev/next
 </pre>
