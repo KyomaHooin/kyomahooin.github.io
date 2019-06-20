@@ -27,9 +27,6 @@ def get_index(tag):
 print "\n--# Post composer 1.0 #--\n"
 
 # HEADER
-
-header,title,rating,tag,content = '','','','',''
-
 while not tag in TAG: tag = raw_input("Tag: ")
 while not title: title = raw_input("Title: ")
 if tag == 'book':
@@ -44,20 +41,16 @@ header += 'date: ' + time.strftime('%Y-%m-%d %H:%M:%S') + '\n'
 header +='---' + '\n'
 
 # CONTENT
-
 while 1:
-    line = raw_input("Content[exit = '.']: ")
+    line = raw_input("Content: ")
     if line == '.': break
     content += line + '\n'
 
 # PREVIEW
-
 preview = raw_input("\nShow preview? [y/n]: ")
-if preview == 'y':
-    print header + content
+if preview == 'y': print header + content
 
 # WRITE
-
 fn = time.strftime('%Y-%m-%d') + '-' + tag + '-' + get_index(tag) +'.md'
 write = raw_input('Write to file [ ' + fn + ' ]? [y/n]: ')
 if write == 'y':
