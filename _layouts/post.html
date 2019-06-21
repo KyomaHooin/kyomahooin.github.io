@@ -5,5 +5,5 @@ layout: default
 
 {{ content }}
 
-{%- if page.previous.url -%}<a style="text-decoration: none;" href="{{ page.previous.url }}"><b>&#60;&#60; </b></a>{%- enfdif -%}
-{%- if page.next.url -%}<a style="text-decoration: none;" href="{{ page.next.url }}"><b> &#62;&#62;</b></a>{%- enfdif -%}
+{%- if page.previous.url -%}<a style="text-decoration: none;" href="{{ page.previous.url }}"><b>&#60;&#60; </b></a>{%- endif -%}
+{%- if page.next.url -%}<a style="text-decoration: none;" href="{{ page.next.url }}"><b> &#62;&#62;</b></a>{%- endif -%}
