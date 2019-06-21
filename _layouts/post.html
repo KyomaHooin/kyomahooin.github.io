@@ -4,3 +4,6 @@ layout: default
 {%- if post.cover -%}<img width="200" src="{{ post.cover }}" /><br/>{%- endif -%}
 
 {{ content }}
+
+{%- if page.previous.url -%}<a style="text-decoration: none;" href="{{ page.previous.url }}"><b>&#60;&#60; </b></a>{%- enfdif -%}
+{%- if page.next.url -%}<a style="text-decoration: none;" href="{{ page.next.url }}"><b> &#62;&#62;</b></a>{%- enfdif -%}
