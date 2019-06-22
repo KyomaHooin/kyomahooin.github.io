@@ -2,15 +2,12 @@
 #
 # Interactive post CLI tool.
 #
-#TODO:
-# -loop video/image/cover
-#
 
 import time,os,re
 
 TAG=['tech','poi','book','sound','other']
 
-header,title,rating,tag,content = '','','','',''
+header,title,rating,tag,media,content = '','','','','',''
 
 #---------------------------
 
@@ -42,10 +39,17 @@ header +='---' + '\n'
 
 # CONTENT
 while 1:
-    line = raw_input("Content: ")
+    media = raw_input("Insert media URL/code: ")
+    if media == '.': break
+    content += media + '\n'
+
+content += '<p>\n'
+while 1:
+    line = raw_input("Insert content: ")
     if line == '.': break
     content += line + '\n'
-
+content += '</p>\n'
+    
 # PREVIEW
 preview = raw_input("\nShow preview? [y/n]: ")
 if preview == 'y': print header + content
