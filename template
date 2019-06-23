@@ -7,8 +7,6 @@ import time,os,re
 
 TAG=['tech','poi','book','sound','other']
 
-header,title,rating,tag,media,content = '','','','','',''
-
 #---------------------------
 
 def get_index(tag):
@@ -21,9 +19,10 @@ def get_index(tag):
 
 #---------------------------
 
-print "\n--# Post composer 1.0 #--\n"
+print "\n--# Post composer 1.1 #--\n"
 
 # HEADER
+header,title,rating,tag = '','','',''
 while not tag in TAG: tag = raw_input("Tag: ")
 while not title: title = raw_input("Title: ")
 if tag == 'book':
@@ -38,17 +37,24 @@ header += 'date: ' + time.strftime('%Y-%m-%d %H:%M:%S') + '\n'
 header +='---' + '\n'
 
 # CONTENT
+content,text = '',''
 while 1:
-    media = raw_input("Insert media URL/code: ")
-    if media == '.': break
-    content += media + '\n'
-
-content += '<p>\n'
+    video = raw_input("Insert video URL: ")
+    if video == '.': break
+    content += '<iframe width="603" height="452" src="' + video + '" frameborder="0"></iframe>\n'
 while 1:
-    line = raw_input("Insert content: ")
+    image = raw_input("Insert image URL: ")
+    if image == '.': break
+    content += '<img width="200" src="' + image + '" />\n'
+while 1:
+    link = raw_input("Insert link URL: ")
+    if link == '.': break
+    content += '<a target="_blank" href="' + link + '">' + re.sub('.*://','',link) + '</a>\n'
+while 1:
+    line = raw_input("Insert text: ")
     if line == '.': break
-    content += line + '\n'
-content += '</p>\n'
+    text += line + '\n'
+if text: content += '<p>\n' +  text + '</p>\n'
     
 # PREVIEW
 preview = raw_input("\nShow preview? [y/n]: ")
