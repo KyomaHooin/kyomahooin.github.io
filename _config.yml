@@ -1,11 +1,11 @@
 
 header_pages:
         -  index.md
-        - 'menu/tech.md'
-        - '/menu/poi.md'
-        - menu/book.md
-        - /menu/sound.md
-        - ./menu/other.md
+        - menu/tech.md
+        - _data/poi.md
+        - _data/book.md
+        - menu/sound.md
+        - menu/other.md
 
 footer: '&#960'
 
