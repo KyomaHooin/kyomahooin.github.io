@@ -1,9 +1,9 @@
 
 header_pages:
-        -  index.md
+        - menu/index.md
         - menu/tech.md
-        - _data/poi.md
-        - _data/book.md
+        - menu/poi.md
+        - menu/book.md
         - menu/sound.md
         - menu/other.md
 
