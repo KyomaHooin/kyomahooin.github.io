@@ -1,11 +1,11 @@
 
 header_pages:
   - index.md
-  - tech.md
-  - poi.md
-  - book.md
-  - sound.md
-  - other.md
+  - _menu/tech.md
+  - _menu/poi.md
+  - _menu/book.md
+  - _menu/sound.md
+  - _menu/other.md
 
-footer: '<a href="/" style="text-decoration: none;">&#960</a>'
+footer: '&#960'
 
