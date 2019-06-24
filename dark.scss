@@ -6,16 +6,13 @@
 /**
  * Style variables
  */
-$base-font-family:     monospace !default;
+$base-font-family:     'Arial',  monospace !default;
 $base-font-size:       12.5px !default;
 $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
 $container-width:      90% !default;
 $container-max-width:  600px !default;
 
-/**
- * Style variables
- */
 $base-color:           #DBDBDB !default;
 $primary-color:        #a1fc8f !default;
 $text-color:           $base-color !default;
