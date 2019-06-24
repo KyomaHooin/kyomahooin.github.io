@@ -1,5 +1,5 @@
 
-header_pages: [ 'index.md', '_menu/tech.md', '_menu/poi.md', '_menu/book.md', '_menu/sound.md', '_menu/other.md' ]
+header_pages: [ index.md, ./_menu/tech.md, ./_menu/poi.md, _menu/book.md, _menu/sound.md, _menu/other.md ]
 
 footer: '&#960'
 
