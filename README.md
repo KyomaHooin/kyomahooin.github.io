@@ -7,7 +7,6 @@ TODO
 <pre>
 -Post by post bugfix.
 -Drop Google font.
--Simplify assets + _sass
 </pre>
 SOURCE
 
