@@ -62,7 +62,7 @@ if preview == 'y': print header + content
 
 # WRITE
 fn = time.strftime('%Y-%m-%d') + '-' + tag + '-' + get_index(tag) +'.md'
-write = raw_input('Write to file [ ' + fn + ' ]? [y/n]: ')
+write = raw_input('Write to file [ _posts/' + fn + ' ]? [y/n]: ')
 if write == 'y':
     try:
         f = open('_posts/' + fn, 'a')
