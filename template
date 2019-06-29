@@ -41,19 +41,19 @@ content,text = '',''
 while 1:
     video = raw_input("Insert video URL: ")
     if video == '.': break
-    content += '<iframe width="603" height="452" src="' + video + '" frameborder="0"></iframe>\n'
+    if video: content += '<iframe width="603" height="452" src="' + video + '" frameborder="0"></iframe>\n'
 while 1:
     image = raw_input("Insert image URL: ")
     if image == '.': break
-    content += '<img width="200" src="' + image + '" />\n'
+    if image: content += '<img width="200" src="' + image + '" />\n'
 while 1:
     link = raw_input("Insert link URL: ")
     if link == '.': break
-    content += '<a target="_blank" href="' + link + '">' + re.sub('.*://','',link) + '</a>\n'
+    if link: content += '<a target="_blank" href="' + link + '">' + re.sub('.*://','',link) + '</a>\n'
 while 1:
     line = raw_input("Insert text: ")
     if line == '.': break
-    text += line + '\n'
+    if line: text += line + '\n'
 if text: content += '<p>\n' +  text + '</p>\n'
     
 # PREVIEW
