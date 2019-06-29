@@ -66,8 +66,7 @@ write = raw_input('Write to file [ ' + fn + ' ]? [y/n]: ')
 if write == 'y':
     try:
         f = open('_posts/' + fn, 'a')
-        f.write(header)
-        f.write(content)
+        f.write(header + content)
         f.close()
         print "Done."
     except:
