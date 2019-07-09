@@ -39,9 +39,9 @@ header +='---' + '\n'
 # CONTENT
 content,text = '',''
 while 1:
-    video = raw_input("Insert video URL: ")
+    video = raw_input("Insert video URL code: ")
     if video == '.': break
-    if video: content += '<iframe width="603" height="452" src="' + video + '" frameborder="0"></iframe>\n'
+    if video: content += '<iframe width="603" height="452" src="https://www.youtube.com/embed/' + video + '" frameborder="0"></iframe>\n'
 while 1:
     image = raw_input("Insert image URL: ")
     if image == '.': break
