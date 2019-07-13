@@ -5,7 +5,7 @@
 
 import time,os,re
 
-TAG=['tech','poi','book','sound','other']
+TAG=['tech','poi','book','sound','other','cyber']
 
 #---------------------------
 
