@@ -28,13 +28,13 @@ while not title: title = raw_input("Title: ")
 if tag == 'book':
     while not rating: rating = raw_input("Rating: ")
 
-header +='---' + '\n'
+header += '---' + '\n'
 header +='title: ' + title + '\n'
 if rating: header += 'rating: ' + rating + '\n'
 header += 'layout: post\n'
-header +='tags: ' + tag + '\n'
+header += 'tags: ' + tag + '\n'
 header += 'date: ' + time.strftime('%Y-%m-%d %H:%M:%S') + '\n'
-header +='---' + '\n'
+header += '---' + '\n'
 
 # CONTENT
 content,text = '',''
