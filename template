@@ -26,7 +26,11 @@ header,title,rating,tag = '','','',''
 while not tag in TAG: tag = raw_input("Tag: ")
 while not title: title = raw_input("Title: ")
 if tag == 'book':
-    while not rating: rating = raw_input("Rating: ")
+    while 1:
+        rating = raw_input("Rating: ")
+        if rating == '.':
+            rating = ''
+            break
 
 header += '---' + '\n'
 header +='title: ' + title + '\n'
