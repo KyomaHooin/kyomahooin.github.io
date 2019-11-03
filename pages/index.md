@@ -4,7 +4,7 @@ layout: default
 permalink: / 
 ---
 <img width="200" src="https://avatars1.githubusercontent.com/u/19186867">
-
+<br/>
 # 岡部 倫太郎 Pesonal Blog
 <br/>
 昔々小の男の子はこの世界に生れた。
