@@ -43,7 +43,7 @@ while 1:
 while 1:
     video = raw_input("Insert video URL code: ")
     if video == '.': break
-    if video: content += '<iframe width="603" height="452" src="https://www.youtube.com/embed/' + video + '" frameborder="0" allowfullscreen></iframe>\n'
+    if video: content += '<iframe width="603" height="452" src="https://www.youtube.com/embed/' + video + '" frameborder="0" allowfullscreen="true"></iframe>\n'
 while 1:
     link = raw_input("Insert link URL: ")
     if link == '.': break
