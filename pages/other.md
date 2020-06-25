@@ -3,4 +3,4 @@ title: Other
 layout: other
 permalink: other
 ---
-# Rubbish ..
+# Other & co ..
