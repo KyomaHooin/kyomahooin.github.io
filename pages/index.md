@@ -4,7 +4,7 @@ layout: default
 permalink: / 
 ---
 <img width="200" src="https://avatars1.githubusercontent.com/u/19186867">
-# 岡部 倫太郎 Pesonal Blog
+# ブルナ・リチャードの個人ブログ
 <p>
 昔々小さい男の子はこの世界に生れた。
 お名前はブルナ・リチャード。
