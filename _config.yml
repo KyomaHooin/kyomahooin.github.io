@@ -1,0 +1,11 @@
+encoding: UTF-8
+header_pages:
+        - pages/index.md
+        - pages/tech.md
+        - pages/cyber.md
+        - pages/poi.md
+        - pages/book.md
+        - pages/sound.md
+        - pages/other.md
+
+footer: '&#960;'

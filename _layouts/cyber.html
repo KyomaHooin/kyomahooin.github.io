@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{%- if site.tags.cyber.size > 0 -%}
+  <br/>
+  <ul>
+    {%- for post in site.tags.cyber -%}
+    <li>
+      {%- assign date_format = "%Y-%m-%d %H:%M" -%}
+      [ {{ post.date | date: date_format }} ] <a style="text-decoration: none;" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
