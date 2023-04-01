@@ -49,7 +49,7 @@ async function put_content(text) {
 
 	return await fetch(url, {
 		method: 'PUT',
-		headers: {'Authorization':'Bearer ' + atob(api_token)},
+		headers: {'Authorization':'Bearer ' + 'test'},
 		body: JSON.stringify(payload)
 	})
 	.then(response => response.json())
