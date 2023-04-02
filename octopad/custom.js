@@ -15,9 +15,11 @@ async function get_content() {
 		method: 'GET',
 		headers: {'Authorization':'Bearer ' + atob(api_token)}
 	})
-	.then(response => response.json())
-	.then(data => {
-		 return data;
+	.then(response => {
+		if (response.ok) {
+			return response.json();
+		}
+		return false;
 	})
 	.catch(error => {
 		console.error(error);
@@ -38,10 +40,10 @@ display_content();
 // Write content
 async function put_content(text) {
 	payload={
-		'message':'note',
-		'committer':{
-			'name':'KyomaHooin',
-			'email':'kyomahooin@gmail.com'
+		'message': 'note',
+		'committer': {
+			'name': 'KyomaHooin',
+			'email': 'kyomahooin@gmail.com'
 		},
 		'content': btoa(escape(text)),
 		'sha': current_sha
@@ -49,13 +51,15 @@ async function put_content(text) {
 
 	return await fetch(url, {
 		method: 'PUT',
-		headers: {'Authorization':'Bearer ' + 'test'},
+		headers: {'Authorization':'Bearer ' + atob(api_token)},
 		body: JSON.stringify(payload)
 	})
-	.then(response => response.json())
-	.then(data => {
-		 return data;
-	})
+	.then(response => {
+		if (response.ok) {
+			return response.json();
+		}
+		return false;
+	})	
 	.catch(error => {
 		console.error(error);
 		return false;
