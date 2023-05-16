@@ -41,6 +41,11 @@ h5:before { content: "#####";  margin-right: 9px; }
 h6:before { content: "######";  margin-right: 9px; }*/
 
 /**
+ * pi
+ */
+.pi { user-select: none; }
+
+/**
  * Layout
  */
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
