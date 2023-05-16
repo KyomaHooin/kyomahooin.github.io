@@ -43,7 +43,12 @@ h6:before { content: "######";  margin-right: 9px; }*/
 /**
  * pi
  */
-.pi { user-select: none; }
+.pi {
+  user-select: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 /**
  * Layout
