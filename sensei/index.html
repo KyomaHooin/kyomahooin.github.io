@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>先生のため</title>
 <link href="bootstrap.min.css" rel="stylesheet">
+<link href="custom.css" rel="stylesheet">
 </head>
 <body class="bg-dark">
     
@@ -15,60 +16,60 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
 <div class="col">
 <div class="card border-0 bg-dark">
-	<img class="img-fluid" src="Read_real_japanese.jpg" alt="Read real japanese">
+	<img class="img-fluid" src="Read_real_japanese.jpg" alt="Read real japanese" onclick="image_modal('Read_real_japanese.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">Lucie 大成 Kreslova 教師からもらいました。</p></div>
 </div>
 </div>
 
 <div class="col">
 <div class="card border-0 bg-dark">
-	<img class="img-fluid" src="もものかんづめ.jpg" alt="momonokazume">
+	<img class="img-fluid" src="もものかんづめ.jpg" alt="momonokazume" onclick="image_modal('もものかんづめ.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">もものかんづめ - さくら ももこ</p></div>
 </div>
 </div>
 
 <div class="col">
 <div class="card border-0 bg-dark">
-	<img class="img-fluid" src="清水市静岡県.jpg" alt="momonokazume">
+	<img class="img-fluid" src="清水市静岡県.jpg" alt="momonokazume" onclick="image_modal('清水市静岡県.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">清水市静岡県</p></div>
 </div>
 </div>
 
 <div class="col">
 <div class="card border-0 bg-dark">
-	<img class="img-fluid" src="さるのこしかけ.jpg" alt="sarunokoshikake">
+	<img class="img-fluid" src="さるのこしかけ.jpg" alt="sarunokoshikake" onclick="image_modal('さるのこしかけ.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">さるのこしかけ- さくら ももこ</p></div>
 </div>
 </div>
 <div class="col">
 <div class="card border-0 bg-dark">
-	<img class="img-fluid" src="清水市.jpg" alt="sarunokoshikake">
+	<img class="img-fluid" src="清水市.jpg" alt="sarunokoshikake" onclick="image_modal('清水市.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">清水市</p></div>
 </div>
 </div>
 <div class="col">
 <div class="card border-0 bg-dark">
-	<img class="img-fluid" src="挿絵一番目.jpg" alt="sarunokoshikake">
+	<img class="img-fluid" src="挿絵一番目.jpg" alt="sarunokoshikake" onclick="image_modal('挿絵一番目.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">画像のイラスト</p></div>
 </div>
 </div>
 <div class="col">
 <div class="card border-0 bg-dark">
-	<img class="img-fluid" src="挿絵二番目.jpg" alt="sarunokoshikake">
+	<img class="img-fluid" src="挿絵二番目.jpg" alt="sarunokoshikake" onclick="image_modal('挿絵二番目.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">挿絵</p></div>
 </div>
 </div>
 
 <div class="col">
 <div class="card shadow-sm bg-dark">
-	<img class="img-fluid" src="皆の日本語中級２本冊.jpg" alt="mina">
+	<img class="img-fluid" src="皆の日本語中級２本冊.jpg" alt="mina" onclick="image_modal('皆の日本語中級２本冊.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">皆の日本語中級２本冊</p></div>
 </div>
 </div>
 
 <div class="col col-md-6">
 <div class="card shadow-sm bg-dark">
-	<img class="img-fluid" src="夜中勉強.jpg" alt="benkyo">
+	<img class="img-fluid" src="夜中勉強.jpg" alt="benkyo" onclick="image_modal('夜中勉強.jpg')">
 	<div class="card-body"><p class="card-text text-center text-light">夜中勉強</p></div>
 </div>
 </div>
@@ -77,6 +78,28 @@
 </div>
 
 </main>
+
+<!-- MODAL --!>
+
+<div class="modal" id="modal" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+	<div class="modal-content bg-transparent border-0">
+		<div class="row">
+			<div class="col text-end">
+				<button type="button" class="btn-close btn-lg btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-center">
+				<img class="img-fluid" id="modal-image" src="" alt="modal" onclick="image_close()">
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<script src="bootstrap.min.js"></script>
+<script src="custom.js"></script>
 
 </body>
 </html>
