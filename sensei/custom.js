@@ -2,18 +2,16 @@
 // TOKEN
 
 const url = 'https://api.github.com/repos/kyomahooin/Sakura/contents/';
-const token_base = 'Z2l0aHViX3BhdF8xMUFFU01KTVkwdFZUbkRscldNaEtSXw==';
+const t_base = 'Z2l0aHViX3BhdF8xMUFFU01KTVkwdFZUbkRscldNaEtSXw==';
 var file = '';
 
 // API GET CONTENT
 
-async function get_content(fn, token) {
-	console.error(url + fn);
-	console.error(token_base + token);
+async function get_content(fn, t) {
 	return await fetch(url + fn, {
 		method: 'GET',
 		headers: {
-			'Authorization':'Bearer ' + atob(token_base) + token,
+			'Authorization':'Bearer ' + atob(token_base) + t,
 			'Accept':'application/vnd.github.raw'
 		}
 	})
