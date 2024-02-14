@@ -10,8 +10,7 @@ var file = '';
 async function get_content(fn, token) {
 	console.error(url + fn);
 	console.error(token_base + token);
-	//return await fetch(url + fn, {
-	return await fetch(url + 'README.md', {
+	return await fetch(url + fn, {
 		method: 'GET',
 		headers: {
 			'Authorization':'Bearer ' + atob(token_base) + token,
