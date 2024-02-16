@@ -6,7 +6,7 @@ modal = new bootstrap.Modal(document.getElementById('modal'));
 // TOKEN
 
 const url = 'https://api.github.com/repos/kyomahooin/Sakura/contents/';
-const base = 'Z2l0aHViX3BhdF8xMUFFU01KTVkwdFZUbkRscldNaEtSXw==';
+const base = 'Z2l0aHViX3BhdF8xMUFFU01KTVkwTjdqVUk3RllZVTJEXw==';
 const cdn = 'https://cloud.fastshare.cz/share/download/';
 
 var f;
