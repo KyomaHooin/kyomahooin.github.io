@@ -1,23 +1,27 @@
 
+// MODAL
+
+modal = new bootstrap.Modal(document.getElementById('modal'));
+
 // TOKEN
 
 const url = 'https://api.github.com/repos/kyomahooin/Sakura/contents/';
-const t_base = 'Z2l0aHViX3BhdF8xMUFFU01KTVkwdFZUbkRscldNaEtSXw==';
-var file = '';
+const base = 'Z2l0aHViX3BhdF8xMUFFU01KTVkwdFZUbkRscldNaEtSXw==';
+const cdn = 'https://cloud.fastshare.cz/share/download/';
 
-// API GET CONTENT
+var f;
 
-async function get_content(fn, t) {
+// API GET
+
+async function get_content(fn, tn) {
+	console.error(fn);
 	return await fetch(url + fn, {
 		method: 'GET',
-		headers: {
-			'Authorization':'Bearer ' + atob(token_base) + t,
-			'Accept':'application/vnd.github.raw'
-		}
+		headers: {'Authorization':'Bearer ' + atob(base) + tn}
 	})
 	.then(response => {
 		if (response.ok) {
-			return response.blob();
+			return response.json();
 		}
 		return false;
 	})
@@ -27,30 +31,27 @@ async function get_content(fn, t) {
 	});
 }
 
-// MODAL
-
-modal = new bootstrap.Modal(document.getElementById('modal'));
+// MOD
 
 function mod(fn) {
+	f = fn;
 	modal.toggle();
-	file = fn;
 }
 
-async function on_confirm() {
-	token = document.getElementById('modal-token').value;
-	const ret = await get_content(file, token);
+// SUBMIT
+
+async function submit() {
+	t = document.getElementById('modal-token').value;
+	ret = await get_content(f, t);
 	if (!ret) {
 		document.getElementById('modal-token').value = '失敗しました';
 	} else {
 		modal.toggle();
-		var a = document.createElement("a");
-		a.style = "display: none";
-		document.body.appendChild(a);
-		var f = window.URL.createObjectURL(ret);
-		a.href = f;
-		a.download = file;
-		a.click();
-		window.URL.revokeObjectURL(f);
+		const link = document.createElement("a");
+		link.href = cdn + unescape(atob(ret['content']));
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
 	}
 }
 
