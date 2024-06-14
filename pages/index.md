@@ -10,5 +10,5 @@ permalink: /
 
 J'aime ma famille, mon frère et mes parents.
 
-Stay tuned. more to come. bianry division enjoys the ride.
+Stay tuned. more to come. binary division enjoys the ride.
 </p>
