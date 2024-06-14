@@ -7,4 +7,7 @@ permalink: /
 # ブルナ・リチャードの個人的ブログ
 <p>
 昭和57年生まれ。プラハ在住。子供の頃、夏休みに毎日御祖母さんの家そば弟と遊んでいる。
+J'aime ma famille, mon frère et mes parents.
+
+Stay tuned. more to come. bianry division enjoys the ride.
 </p>
