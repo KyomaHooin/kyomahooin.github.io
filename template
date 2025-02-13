@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Interactive post CLI tool.
 #
@@ -20,13 +20,13 @@ def get_index(tag):
 
 #---------------------------
 
-print "\n--# Post composer 1.1 #--\n"
+print("\n--# Post composer 1.1 #--\n")
 
 # HEADER
 header,title,rating,tag = '','','',''
-while not tag in TAG: tag = raw_input("Tag: ")
-while not title: title = raw_input("Title: ")
-if tag == 'book': rating = raw_input("Rating: ")
+while not tag in TAG: tag = input("Tag: ")
+while not title: title = input("Title: ")
+if tag == 'book': rating = input("Rating: ")
 header += '---' + '\n'
 header +='title: ' + title + '\n'
 if rating: header += 'rating: ' + rating + '\n'
@@ -38,36 +38,36 @@ header += '---' + '\n'
 # CONTENT
 content,text = '',''
 while 1:
-    image = raw_input("Insert image URL: ")
+    image = input("Insert image URL: ")
     if image == '.': break
     if image: content += '<img width="200" src="' + image + '" />\n'
 while 1:
-    video = raw_input("Insert video URL code: ")
+    video = input("Insert video URL code: ")
     if video == '.': break
     if video: content += '<iframe width="603" height="452" src="https://www.youtube.com/embed/' + video + '" frameborder="0" allowfullscreen="true"></iframe>\n'
 while 1:
-    link = raw_input("Insert link URL: ")
+    link = input("Insert link URL: ")
     if link == '.': break
     if link: content += '<a target="_blank" href="' + link + '">' + re.sub('.*://','',link) + '</a>\n'
 while 1:
-    line = raw_input("Insert text: ")
+    line = input("Insert text: ")
     if line == '.': break
     if line: text += line + '\n'
 if text: content += '<p>\n' +  text + '</p>\n'
     
 # PREVIEW
-preview = raw_input("\nShow preview? [y/n]: ")
-if preview == 'y': print header + content
+preview = input("\nShow preview? [y/n]: ")
+if preview == 'y': print(header + content)
 
 # WRITE
 fn = datetime.utcnow().strftime('%Y-%m-%d') + '-' + tag + '-' + get_index(tag) +'.md'
-write = raw_input('Write to file [ _posts/' + fn + ' ]? [y/n]: ')
+write = input('Write to file [ _posts/' + fn + ' ]? [y/n]: ')
 if write == 'y':
     try:
         f = open('_posts/' + fn, 'a')
         f.write(header + content)
         f.close()
-        print "Done."
+        print("Done.")
     except:
-        print "Write error."
+        print("Write error.")
 
