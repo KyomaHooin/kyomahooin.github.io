@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>先生のため</title>
+<link href="bootstrap.min.css" rel="stylesheet">
+<link href="custom.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+    
+<main>
+
+<div class="container my-4">
+
+<div class="row"><div class="col text-center mb-4"><h5 class="text-light">最近</h5></div></div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+<div class="col">
+<div class="card border-0 bg-dark">
+	<img class="img-fluid" src="20250502_184049.jpg" alt=" " onclick="image_modal('20250502_184049.jpg')">
+	<div class="card-body"><p class="card-text text-center text-light text-wrap h5">鳥小屋</p></div>
+</div>
+</div>
+
+<div class="col">
+<div class="card border-0 bg-dark">
+	<img class="img-fluid" src="20250502_184109.jpg" alt=" " onclick="image_modal('20250502_184109.jpg')">
+	<div class="card-body"><p class="card-text text-center text-light text-wrap h5">影と馬</p></div>
+</div>
+</div>
+<div class="col">
+<div class="card border-0 bg-dark">
+	<img class="img-fluid" src="20250503_122110.jpg" alt=" " onclick="image_modal('20250503_122110.jpg')">
+	<div class="card-body"><p class="card-text text-center text-light text-wrap h5">メモ</p></div>
+</div>
+</div>
+
+<div class="col">
+<div class="card border-0 bg-dark">
+	<video controls="true" poster="/sensei/otahiromi.jpg">
+		<source src="/sensei/hankachi.mp3" type="audio/mp3">
+		音声 エラー
+	</video> 
+	<div class="card-body"><p class="card-text text-center text-light text-wrap">太田裕美</p></div>
+</div>
+</div>
+
+<div class="col">
+<div class="card border-0 bg-dark">
+	<video controls="true" poster="/sensei/rookies.jpg">
+		<source src="/sensei/rookies.mp3" type="audio/mp3">
+		音声 エラー
+	</video> 
+	<div class="card-body"><p class="card-text text-center text-light text-wrap">ルーキーズ 卒業</p></div>
+</div>
+</div>
+
+</div>
+</div>
+
+</main>
+
+<!-- MODAL --!>
+
+<div class="modal" id="modal" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+	<div class="modal-content bg-transparent border-0">
+		<div class="row">
+			<div class="col text-end">
+				<button type="button" class="btn-close btn-lg btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-center">
+				<img class="img-fluid" id="modal-image" src="" alt="modal" onclick="image_close()">
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<script src="bootstrap.min.js"></script>
+<script src="custom.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>2FA</title>
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<link href="custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-black">
+<main class="container text-center">
+<form method="post" action="." enctype="multipart/form-data">
+
+<div class="row my-4 align-items-center justify-content-center">
+
+	<div class="col-3 col-md-1">
+
+	<svg width="56" height="56" onclick="gen_token('git')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#fff"/></svg>
+
+	</div>
+
+	<div class="col-6 col-md-3 bg-light rounded-3 border border-secondary">
+		<div class="row">
+			<div id="git" class="col fs-2">&nbsp;</div>
+			<div class="col-3 col-md-2 d-flex align-items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" onclick="clip('git')" class="bi bi-clipboard" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row my-4 align-items-center justify-content-center">
+
+	<div class="col-3 col-md-1">
+
+	<svg width="56" height="56" onclick="gen_token('proton')" viewBox="0 0 979 785" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_6150_150890)"><path d="M0 22.6001C0 3.50006 22.2 -6.89994 36.9 5.20006L424.7 327.4C462.2 358.6 516.6 358.6 554.1 327.4L941.8 5.20006C956.5 -6.99994 978.7 3.50006 978.7 22.5001V683.6C978.7 739.5 933.4 784.9 877.5 784.9H101.2C45.3 785 0 739.6 0 683.7V22.6001Z" fill="#686868"/><path fill-rule="evenodd" clip-rule="evenodd" d="M621.5 271.4L426.2 444.1C392.9 473.5 343.2 474.2 309.1 445.8L0 188.6V22.6003C0 3.50034 22.2 -6.89966 36.9 5.20034L424.7 327.4C462.2 358.6 516.6 358.6 554.1 327.4L621.5 271.4Z" fill="url(#paint0_linear_6150_150890)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M770.6 147.501V785.001H877.5C933.4 785.001 978.7 739.601 978.7 683.701V22.6007C978.7 3.50066 956.5 -6.89934 941.8 5.30066L770.6 147.501Z" fill="url(#paint1_linear_6150_150890)"/></g><defs><linearGradient id="paint0_linear_6150_150890" x1="367.24" y1="470.973" x2="143.929" y2="-481.876" gradientUnits="userSpaceOnUse"><stop stop-color="#E1E1E1"/><stop offset="1" stop-color="#686868"/></linearGradient><linearGradient id="paint1_linear_6150_150890" x1="1292.76" y1="1293.89" x2="530.792" y2="-332.99" gradientUnits="userSpaceOnUse"><stop offset="0.271" stop-color="#E1E1E1"/><stop offset="1" stop-color="#686868"/></linearGradient><clipPath id="clip0_6150_150890"><rect width="979" height="785" fill="white"/></clipPath></defs></svg>
+
+	</div>
+
+	<div class="col-6 col-md-3 bg-light rounded-3 border border-secondary">
+		<div class="row">
+			<div id="proton" class="col fs-2">&nbsp;</div>
+			<div class="col-3 col-md-2 d-flex align-items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" onclick="clip('proton')" class="bi bi-clipboard" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row my-4 align-items-center justify-content-center">
+
+	<div class="col-3 col-md-1">
+		<svg width="56" height="56" onclick="gen_token('lab')" xmlns="http://www.w3.org/2000/svg" viewBox="78 78 224 224" fill="#fff"><g id="LOGO"><path d="M282.83,170.73l-.27-.69-26.14-68.22a6.81,6.81,0,0,0-2.69-3.24,7,7,0,0,0-8,.43,7,7,0,0,0-2.32,3.52l-17.65,
+54H154.29l-17.65-54A6.86,6.86,0,0,0,134.32,99a7,7,0,0,0-8-.43,6.87,6.87,0,0,0-2.69,3.24L97.44,170l-.26.69a48.54,48.54,0,0,0,
+16.1,56.1l.09.07.24.17,39.82,29.82,19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91,40.06-30,.1-.08A48.56,48.56,
+0,0,0,282.83,170.73Z"/></g></svg>
+	
+	</div>
+
+	<div class="col-6 col-md-3 bg-light rounded-3 border border-secondary">
+		<div class="row">
+			<div id="lab" class="col fs-2">&nbsp;</div>
+			<div class="col-3 col-md-2 d-flex align-items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" onclick="clip('lab')" class="bi bi-clipboard" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</form>
+</main>
+
+<script src="sha1.js"></script>
+<script src="custom.js"></script>
+
+</body>
+</html>
+

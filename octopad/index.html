@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OctoPAD</title>
+	<link href="bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-black">
+<main class="container text-center">
+<form method="post" action="." enctype="multipart/form-data">
+
+<div class="row m-0 justify-content-center">
+	<div class="col col-md-6 my-4">
+		<textarea class="form-control bg-light" id="note" rows="10"></textarea>
+	</div>
+</div>
+
+<div class="row m-0 justify-content-center">
+	<div class="d-grid col-6 col-md-4 mx-auto">
+  		<button class="btn btn-secondary" type="button" onclick="commit()">保存</button>
+	</div>
+</div>
+
+<div class="spinner-border text-light my-4" role="status" id="spinner" hidden></div>
+
+</form>
+</main>
+
+<!-- modal -->
+
+<div class="modal" id="modal" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-content shadow">
+		<div class="container-fluid">
+			<div class="row my-2">
+				<div class="col my-2">
+					<span class="align-middle fw-bold">転送に失敗しました。</span>
+				</div>
+				<div class="col-1 d-flex align-items-center me-2">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<script src="bootstrap.min.js"></script>
+<script src="custom.js"></script>
+
+</body>
+</html>
+
