@@ -35,16 +35,16 @@ xmlns:kvg CDATA #FIXED "http://kanjivg.tagaini.net"
 kvg:type CDATA #IMPLIED >
 ]>
 <svg xmlns="http://www.w3.org/2000/svg" width="109" height="109" viewBox="0 0 109 109">
-<g id="kvg:StrokePaths_05317" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;">
-<g id="kvg:05317" kvg:element="北">
-	<g id="kvg:05317-g1" kvg:position="left">
-		<path id="kvg:05317-s1" kvg:type="㇐c" d="M13.25,48.75c2.61,0.5,3.52,0.51,6.12,0.25c3.76-0.38,14.13-3.38,17.63-3.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s2" kvg:type="㇑a" d="M37.25,21.5c1.19,1.19,2,3.25,2,4.75c0,1,0.25,48,0.25,50.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s3" kvg:type="㇀" d="M12.75,88.75c1.88,1.12,4.29,0.87,6.5-0.25C32.5,81.75,36.5,80,43.5,76.25" style="stroke: rgb(255,255,0);"/>
+<g id="kvg:StrokePaths_05e02" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;">
+<g id="kvg:05e02" kvg:element="市">
+	<g id="kvg:05e02-g1" kvg:element="亠" kvg:position="top" kvg:radical="nelson">
+		<path id="kvg:05e02-s1" kvg:type="㇑a" d="M52.86,12c1.26,1.26,1.48,2.5,1.48,4.66c0,4.84-0.15,6.46-0.15,8.9" style="stroke: rgb(255,255,0);"/>
+		<path id="kvg:05e02-s2" kvg:type="㇐" d="M15.5,28.96c3.65,0.76,7.24,0.69,9.36,0.46c16.74-1.8,45.31-4.8,60.95-5.6c3.62-0.19,5.48,0.04,8.18,0.59" style="stroke: rgb(255,255,0);"/>
 	</g>
-	<g id="kvg:05317-g2" kvg:element="匕" kvg:position="right" kvg:radical="general">
-		<path id="kvg:05317-s4" kvg:type="㇒" d="M90.25,33c-0.25,1.75-1.13,3.26-2.19,4.07C82.12,41.62,73.75,46.5,65,49.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s5" kvg:type="㇟" d="M60.37,19.5c1.38,1.5,1.91,3.25,1.91,5.3c0,1.12-0.28,33.71-0.28,47.7c0,14,2,15.75,17.25,15.75c15.5,0,16.5-1.5,16.5-12.49" style="stroke: rgb(211,211,211);"/>
+	<g id="kvg:05e02-g2" kvg:element="巾" kvg:position="bottom" kvg:radical="tradit" kvg:phon="止V">
+		<path id="kvg:05e02-s3" kvg:type="㇑" d="M27.31,46c1.22,1.22,1.6,2.75,1.6,4.61c0,3.34-0.06,19.8-0.16,28.65c-0.02,2.13-0.05,3.8-0.08,4.72" style="stroke: rgb(211,211,211);"/>
+		<path id="kvg:05e02-s4" kvg:type="㇆a" d="M30.28,48.5c12.28-1.24,45.6-4.38,48.37-4.38c3.6,0,5.35,0.87,5.35,5.09c0,9.3-0.25,21.16-1.4,29.97c-1.06,8.11-6.24,0.06-7.73-1.27" style="stroke: rgb(211,211,211);"/>
+		<path id="kvg:05e02-s5" kvg:type="㇑" d="M53.53,32.88c1.17,1.17,1.85,2.87,1.85,4.36c0,5.51-0.27,35.65-0.32,54.26c-0.01,2.28-0.01,4.31-0.01,6" style="stroke: rgb(211,211,211);"/>
 	</g>
 </g>
 </g>

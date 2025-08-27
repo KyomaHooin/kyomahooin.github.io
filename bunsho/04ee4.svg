@@ -35,16 +35,20 @@ xmlns:kvg CDATA #FIXED "http://kanjivg.tagaini.net"
 kvg:type CDATA #IMPLIED >
 ]>
 <svg xmlns="http://www.w3.org/2000/svg" width="109" height="109" viewBox="0 0 109 109">
-<g id="kvg:StrokePaths_05317" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;">
-<g id="kvg:05317" kvg:element="北">
-	<g id="kvg:05317-g1" kvg:position="left">
-		<path id="kvg:05317-s1" kvg:type="㇐c" d="M13.25,48.75c2.61,0.5,3.52,0.51,6.12,0.25c3.76-0.38,14.13-3.38,17.63-3.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s2" kvg:type="㇑a" d="M37.25,21.5c1.19,1.19,2,3.25,2,4.75c0,1,0.25,48,0.25,50.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s3" kvg:type="㇀" d="M12.75,88.75c1.88,1.12,4.29,0.87,6.5-0.25C32.5,81.75,36.5,80,43.5,76.25" style="stroke: rgb(255,255,0);"/>
+<g id="kvg:StrokePaths_04ee4" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;">
+<g id="kvg:04ee4" kvg:element="令">
+	<g id="kvg:04ee4-g1" kvg:element="人" kvg:position="top" kvg:radical="general">
+		<path id="kvg:04ee4-s1" kvg:type="㇒" d="M49.62,13.25c0.11,0.94,0.38,2.48-0.22,3.77c-4.15,8.86-15.15,25.23-36.65,37.08" style="stroke: rgb(211,211,211);"/>
+		<path id="kvg:04ee4-s2" kvg:type="㇏" d="M50.54,16.55c6.13,4.35,24.99,20.22,33.98,27.33c3.22,2.54,5.6,4.12,9.73,5.37" style="stroke: rgb(211,211,211);"/>
 	</g>
-	<g id="kvg:05317-g2" kvg:element="匕" kvg:position="right" kvg:radical="general">
-		<path id="kvg:05317-s4" kvg:type="㇒" d="M90.25,33c-0.25,1.75-1.13,3.26-2.19,4.07C82.12,41.62,73.75,46.5,65,49.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s5" kvg:type="㇟" d="M60.37,19.5c1.38,1.5,1.91,3.25,1.91,5.3c0,1.12-0.28,33.71-0.28,47.7c0,14,2,15.75,17.25,15.75c15.5,0,16.5-1.5,16.5-12.49" style="stroke: rgb(211,211,211);"/>
+	<g id="kvg:04ee4-g2" kvg:position="bottom">
+		<g id="kvg:04ee4-g3" kvg:element="一">
+			<path id="kvg:04ee4-s3" kvg:type="㇔" d="M47.27,45.33c3.54,1.52,9.16,6.26,10.04,8.63" style="stroke: rgb(211,211,211);"/>
+		</g>
+		<g id="kvg:04ee4-g4" kvg:element="マ">
+			<path id="kvg:04ee4-s4" kvg:type="㇇" d="M29.08,65.79c1.35,0.83,4.19,1.22,5.72,1.01c3.03-0.41,35.42-5.69,38.62-6.1s4,1.47,1.71,3.66c-5.38,5.13-21.87,19.81-23.89,21.47" style="stroke: rgb(255,255,0);"/>
+			<path id="kvg:04ee4-s5" kvg:type="㇔" d="M41.59,81.4c6.16,3.22,13.66,8.47,17.12,15.6" style="stroke: rgb(255,255,0);"/>
+		</g>
 	</g>
 </g>
 </g>

@@ -35,16 +35,16 @@ xmlns:kvg CDATA #FIXED "http://kanjivg.tagaini.net"
 kvg:type CDATA #IMPLIED >
 ]>
 <svg xmlns="http://www.w3.org/2000/svg" width="109" height="109" viewBox="0 0 109 109">
-<g id="kvg:StrokePaths_05317" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;">
-<g id="kvg:05317" kvg:element="北">
-	<g id="kvg:05317-g1" kvg:position="left">
-		<path id="kvg:05317-s1" kvg:type="㇐c" d="M13.25,48.75c2.61,0.5,3.52,0.51,6.12,0.25c3.76-0.38,14.13-3.38,17.63-3.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s2" kvg:type="㇑a" d="M37.25,21.5c1.19,1.19,2,3.25,2,4.75c0,1,0.25,48,0.25,50.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s3" kvg:type="㇀" d="M12.75,88.75c1.88,1.12,4.29,0.87,6.5-0.25C32.5,81.75,36.5,80,43.5,76.25" style="stroke: rgb(255,255,0);"/>
+<g id="kvg:StrokePaths_0767d" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;">
+<g id="kvg:0767d" kvg:element="白" kvg:radical="general">
+	<g id="kvg:0767d-g1" kvg:position="top">
+		<path id="kvg:0767d-s1" kvg:type="㇒" d="M55,13c0.38,1.5,0,3.25-0.57,4.29C51.32,22.93,46,31.12,36.81,40.22" style="stroke: rgb(255,255,0);"/>
 	</g>
-	<g id="kvg:05317-g2" kvg:element="匕" kvg:position="right" kvg:radical="general">
-		<path id="kvg:05317-s4" kvg:type="㇒" d="M90.25,33c-0.25,1.75-1.13,3.26-2.19,4.07C82.12,41.62,73.75,46.5,65,49.75" style="stroke: rgb(211,211,211);"/>
-		<path id="kvg:05317-s5" kvg:type="㇟" d="M60.37,19.5c1.38,1.5,1.91,3.25,1.91,5.3c0,1.12-0.28,33.71-0.28,47.7c0,14,2,15.75,17.25,15.75c15.5,0,16.5-1.5,16.5-12.49" style="stroke: rgb(211,211,211);"/>
+	<g id="kvg:0767d-g2" kvg:element="日" kvg:position="bottom">
+		<path id="kvg:0767d-s2" kvg:type="㇑" d="M25.5,40.47c1.14,1.14,1.63,2.81,1.63,4.63c0,1.55,0.95,32.47,1.32,47.14c0.06,2.58,0.13,4.66,0.18,6" style="stroke: rgb(211,211,211);"/>
+		<path id="kvg:0767d-s3" kvg:type="㇕a" d="M28.27,43.98c13.98-1.73,39.08-4.47,49.67-5.48c5.19-0.5,7.37,0.76,7.06,5.38c-0.62,9.12-2.09,30.3-3.29,46.88c-0.17,2.42-0.33,4.65-0.46,6.57" style="stroke: rgb(211,211,211);"/>
+		<path id="kvg:0767d-s4" kvg:type="㇐a" d="M29.13,67.44C42.25,66,72.38,63.62,82.57,63.4" style="stroke: rgb(211,211,211);"/>
+		<path id="kvg:0767d-s5" kvg:type="㇐a" d="M29.69,94.49C43,93.75,66.62,92,80.19,91.41" style="stroke: rgb(211,211,211);"/>
 	</g>
 </g>
 </g>
