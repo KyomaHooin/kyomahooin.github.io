@@ -8,7 +8,7 @@ layout: default
   <table class="table table-dark table-borderless table-sm">
   <tbody>
     {%- for post in site.tags.sound -%}
-      {%- assign date_format = "%Y-%m-%d %H:%M" -%}
+      {%- assign date_format = "%Y-%m-%d" -%}
      <tr class="d-flex justify-content-start text-nowrap">
 	<td class="py-0"> - [ {{ post.date | date: date_format }} ]</td>
 	<td class="py-0"><a class="menu" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
