@@ -3,17 +3,21 @@
 
   {%- include head.html -%}
 
-  <body>
-    <div class="container">
+  <body style="background-color:#000000;">
+   <div class="container">
+   <div class="row my-4 justify-content-center">
+   <div class="col col-xxl-7 text-light font-monospace">
 
       {%- include header.html -%}
 
-    <main>
+    <main class="my-4">
       {{ content }}
     </main>
 
     {%- include footer.html -%}
 
+    </div>
+    </div>
     </div>
   <script src="/custom.js"></script>
   </body>

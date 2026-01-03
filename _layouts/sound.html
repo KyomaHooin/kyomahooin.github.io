@@ -5,13 +5,15 @@ layout: default
 {{ content }}
 
 {%- if site.tags.sound.size > 0 -%}
-  <br/>
-  <ul>
-    {%- for post in site.tags.sound -%}
-    <li>
+  <table class="table table-dark table-borderless table-sm">
+  <tbody>
+    {%- for post in site.sound.book -%}
       {%- assign date_format = "%Y-%m-%d %H:%M" -%}
-      [ {{ post.date | date: date_format }} ] <a style="text-decoration: none;" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </li>
+     <tr class="d-flex justify-content-start text-nowrap">
+	<td class="py-0"> - [ {{ post.date | date: date_format }} ]</td>
+	<td class="py-0"><a class="menu" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
+     </tr>
     {%- endfor -%}
-  </ul>
+  </tbody>
+  </table>
 {%- endif -%}
