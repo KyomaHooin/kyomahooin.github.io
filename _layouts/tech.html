@@ -11,7 +11,7 @@ layout: default
       {%- assign date_format = "%Y-%m-%d" -%}
      <tr class="d-flex justify-content-start text-nowrap">
 	<td class="py-0"> - [ {{ post.date | date: date_format }} ]</td>
-	<td class="py-0"><a class="menu" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
+	<td class="py-0 text-wrap"><a class="menu" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
      </tr>
     {%- endfor -%}
   </tbody>
