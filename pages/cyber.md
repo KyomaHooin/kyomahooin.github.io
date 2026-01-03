@@ -3,4 +3,4 @@ title: Cyber
 layout: cyber
 permalink: cyber
 ---
-# Cyberpunk & Co ..
+**Cyberpunk & Co ..**
