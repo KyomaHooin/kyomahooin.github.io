@@ -3,13 +3,13 @@ title: About
 layout: default
 permalink: / 
 ---
-<img width="200" src="https://avatars1.githubusercontent.com/u/19186867">
-<p>
-**ブルナ・リチャード**
+<img width="200" src="19186867.png">
+<
+p>><b>ブルナ・リチャード</b></p>
 
-昭和57年生まれ。プラハ在住。
+<p>昭和57年生まれ。プラハ在住</p>
 
-J'aime ma famille, mon frère et mes parents.
+<p>J'aime ma famille, mon frère et mes parents.</p>
 
-stay tuned. more to come.
-</p>
+<p>stay tuned. more to come.</p>
+
