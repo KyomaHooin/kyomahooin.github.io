@@ -1,9 +1,6 @@
 //
-// OATH Javascript code by "gbraad"
-// https://gist.github.com/gbraad/2885828
-//
-// SHA-1/HMAC library by "Caligatio"
-//https://github.com/Caligatio/jsSHA
+// OATH JavaScript code by "gbraad"  https://gist.github.com/gbraad/2885828
+// SHA-1/HMAC library by "Caligatio" https://github.com/Caligatio/jsSHA
 //
 
 const git_secret='VVBZKIJ65FDZPA44';
