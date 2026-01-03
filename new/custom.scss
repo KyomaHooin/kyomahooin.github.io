@@ -1,0 +1,37 @@
+
+@use "bootstrap/scss/bootstrap.scss";
+
+.table {
+	--bs-table-bg: #000000;
+}
+
+.page {
+	text-decoration: none;
+}
+
+.nav {
+	@extend .border-start-0;
+	@extend .border-end-0;
+	@extend .border-dark-subtle;
+	@extend .border-1;
+	border-style: dashed;
+}
+
+.menu {
+	@extend .link-light;
+	@extend .link-offset-3-hover;
+	@extend .link-underline;
+	@extend .link-underline-opacity-0;
+	@extend .link-underline-opacity-75-hover;
+}
+
+.pi {
+	@extend .border-start-0;
+	@extend .border-end-0;
+	@extend .border-bottom-0;
+	@extend .border-dark-subtle;
+	@extend .border-1;
+	border-style: dashed;
+	user-select: none;
+}
+
