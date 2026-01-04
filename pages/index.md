@@ -7,7 +7,7 @@ permalink: /
 
 <p><b>ブルナ・リチャード</b></p>
 
-<p>昭和57年生まれ。プラハ在住</p>
+<p>昭和57年生まれ。プラハ在住。</p>
 
 <p>J'aime ma famille, mon frère et mes parents.</p>
 
