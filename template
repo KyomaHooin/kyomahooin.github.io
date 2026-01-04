@@ -1,43 +1,49 @@
 #!/usr/bin/python3
 #
-# Interactive post CLI tool.
+# Interactive Jekyll post CLI tool
 #
 
-import os,re
+import sys,os,re
 from datetime import datetime
 
 VERSION='1.2'
 
-TAG=['tech','poi','book','sound','other','cyber']
+TAG=['tech','cyber','poi','book','sound','other']
 
-#---------------------------
+# DEF
 
 def get_index(tag):
     index = 1
-    for F in os.listdir('blog/'+ tag + '/_posts/'):
-        i = int(re.sub('.*' + tag + '-(.*)\.md','\\1',F))
+    for f in os.listdir('blog/'+ tag + '/_posts/'):
+        i = int(re.sub('.*' + tag + '-(.*)\.md','\\1', f))
         if i > index: index = i
     return str(index + 1)
 
-#---------------------------
-
-print("\n--| Post composer "+ VERSION + " |--\n")
+print("\n-- Post composer "+ VERSION + " --\n")
 
 # HEADER
+
 header,title,rating,tag = '','','',''
+
 while not tag in TAG: tag = input("Tag: ")
 while not title: title = input("Title: ")
+
 if tag == 'book': rating = input("Rating: ")
+
 header += '---' + '\n'
 header +='title: ' + title + '\n'
+
 if rating: header += 'rating: ' + rating + '\n'
+
 header += 'layout: post\n'
 header += 'tags: ' + tag + '\n'
 header += 'date: ' + datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S') + '\n'
 header += '---' + '\n'
 
 # CONTENT
+
 content,text = '',''
+
 while 1:
     image = input("Insert image URL: ")
     if image == '.': break
@@ -54,13 +60,16 @@ while 1:
     line = input("Insert text: ")
     if line == '.': break
     if line: text += line + '\n'
+
 if text: content += '<p>\n' +  text + '</p>\n'
     
 # PREVIEW
+
 preview = input("\nShow preview? [y/n]: ")
 if preview == 'y': print(header + content)
 
 # WRITE
+
 fn = datetime.utcnow().strftime('%Y-%m-%d') + '-' + tag + '-' + get_index(tag) +'.md'
 write = input('Write to file [ blog/' + tag + '/_posts/' + fn + ' ]? [y/n]: ')
 if write == 'y':
@@ -72,3 +81,4 @@ if write == 'y':
     except:
         print("Write error.")
 
+sys.exit(0)
