@@ -1,6 +1,6 @@
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
-  <nav class="nav nav-pills py-1 justify-content-end">
+  <nav class="nav nav-pills py-1 justify-content-end justify-content-sm-center">
     {%- for path in page_paths -%}
       {%- assign my_page = site.pages | where: "path", path | first -%}
       {%- if my_page.title -%}
