@@ -8,6 +8,7 @@
           <a class="nav-link text-light mx-2 active" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
         {% else %}
           <a class="nav-link text-light mx-2" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
   </nav>
