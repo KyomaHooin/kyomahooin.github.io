@@ -23,16 +23,18 @@ print("\n-- Post composer "+ VERSION + " --\n")
 
 # HEADER
 
-header,title,rating,tag = '','','',''
+header,title,author,media,rating,tag = '','','',''
 
 while not tag in TAG: tag = input("Tag: ")
 while not title: title = input("Title: ")
-
+if tag in ['poi','book','sound']: author = input("Author: ")
+if tag in ['poi','sound']: media = input("Media: ")
 if tag == 'book': rating = input("Rating: ")
 
 header += '---' + '\n'
 header +='title: ' + title + '\n'
-
+if author: header +='author: ' + author + '\n'
+if media: header +='media: ' + media + '\n'
 if rating: header += 'rating: ' + rating + '\n'
 
 header += 'layout: post\n'
@@ -48,10 +50,6 @@ while 1:
     image = input("Insert image URL: ")
     if image == '.': break
     if image: content += '<img width="200" src="' + image + '" />\n'
-while 1:
-    video = input("Insert video URL code: ")
-    if video == '.': break
-    if video: content += '<div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/' + video + '" allowfullscreen="true"></iframe></div>\n'
 while 1:
     link = input("Insert link URL: ")
     if link == '.': break
