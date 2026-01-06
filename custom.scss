@@ -1,6 +1,11 @@
 ---
 ---
 
+// override
+
+$nav-pills-link-active-color: #505050;
+$nav-link-padding-y: .25rem;
+
 @import "bootstrap/scss/bootstrap.scss";
 
 .table {
@@ -19,8 +24,13 @@
 	border-style: dashed;
 }
 
-$nav-pills-link-active-color: #505050;
-$nav-link-padding-y: .25rem;
+.post {
+	@extend .link-light;
+	@extend .link-offset-3-hover;
+	@extend .link-underline;
+	@extend .link-underline-opacity-0;
+	@extend .link-underline-opacity-75-hover;
+}
 
 .pi {
 	@extend .border-start-0;
