@@ -2,12 +2,12 @@
 <header>
   <nav class="nav nav-pills py-1 justify-content-end justify-content-sm-center">
     {%- for path in page_paths -%}
-      {%- assign my_page = site.pages | where: "path", path | first -%}
-      {%- if my_page.title -%}
-        {% if page.name contains my_page.title %}
-          <a class="nav-link text-light mx-2 active" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      {%- assign menu_page = site.pages | where: "path", path | first -%}
+      {%- if menu_page.title -%}
+        {% if page.tags == menu_page.layout or page.name contains menu_page.layout %}
+          <a class="nav-link text-light mx-2 active" href="{{ menu_page.url | relative_url }}">{{ menu_page.title | escape }}</a>
         {% else %}
-          <a class="nav-link text-light mx-2" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          <a class="nav-link text-light mx-2" href="{{ menu_page.url | relative_url }}">{{ menu_page.title | escape }}</a>
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
@@ -17,4 +17,3 @@
 <p>Debug: {{ page.layout }}</p><br>
 <p>Debug: {{ page.tags }}</p><br>
 <p>Debug: {{ page.url }}</p><br>
-<p>Debug: {{ my_page.title }}</p><br>
