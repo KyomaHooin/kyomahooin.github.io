@@ -19,13 +19,8 @@
 	border-style: dashed;
 }
 
-.menu {
-	@extend .link-light;
-	@extend .link-offset-3-hover;
-	@extend .link-underline;
-	@extend .link-underline-opacity-0;
-	@extend .link-underline-opacity-75-hover;
-}
+$nav-pills-link-active-color: #505050;
+$nav-link-padding-y: .25rem;
 
 .pi {
 	@extend .border-start-0;
