@@ -4,7 +4,7 @@
     {%- for path in page_paths -%}
       {%- assign menu_page = site.pages | where: "path", path | first -%}
       {%- if menu_page.title -%}
-        {% if page.tags == menu_page.layout or page.name contains menu_page.layout %}
+        {% if page.tags contains menu_page.layout or page.name contains menu_page.layout %}
           <a class="nav-link text-light mx-2 active" href="{{ menu_page.url | relative_url }}">{{ menu_page.title | escape }}</a>
         {% else %}
           <a class="nav-link text-light mx-2" href="{{ menu_page.url | relative_url }}">{{ menu_page.title | escape }}</a>
@@ -17,3 +17,5 @@
 <p>Debug: {{ page.layout }}</p><br>
 <p>Debug: {{ page.tags }}</p><br>
 <p>Debug: {{ page.url }}</p><br>
+<p>Debug: {{ menu_page.layout }}</p><br>
+<p>Debug: {{ menu_page.title }}</p><br>
