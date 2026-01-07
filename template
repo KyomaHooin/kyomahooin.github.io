@@ -19,6 +19,8 @@ def get_index(tag):
         if i > index: index = i
     return str(index + 1)
 
+#----------------------------------------------------
+
 print("\n-- Post composer "+ VERSION + " --\n")
 
 # HEADER
@@ -53,13 +55,13 @@ while 1:
 while 1:
     link = input("Insert link URL: ")
     if link == '.': break
-    if link: content += '<a target="_blank" href="' + link + '">' + re.sub('.*://','',link) + '</a>\n'
+    if link: content += '\n<a target="_blank" href="' + link + '">' + re.sub('.*://','',link) + '</a>\n'
 while 1:
     line = input("Insert text: ")
     if line == '.': break
     if line: text += line + '\n'
 
-if text: content += '<p>\n' +  text + '</p>\n'
+if text: content += '\n' +  text + '\n'
     
 # PREVIEW
 
