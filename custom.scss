@@ -1,20 +1,22 @@
 ---
 ---
 
-// override
-
 $nav-pills-link-active-bg: #505050;
 $nav-pills-border-radius: .2rem;
 $nav-link-padding-y: .25rem;
 
 @import "bootstrap/scss/bootstrap.scss";
 
-.table {
-	--bs-table-bg: #000000;
+a {
+        color: $light;
 }
 
-.page {
-	text-decoration: none;
+body {
+	background-color: #000000;
+}
+
+.table {
+	--bs-table-bg: #000000;
 }
 
 .nav {
