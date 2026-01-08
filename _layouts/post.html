@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% if page.media %}
-	<div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/{{ page.media }}" allowfullscreen="true"></iframe></div>
+	<p class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/{{ page.media }}" allowfullscreen="true"></iframe></p>
 {% endif %}
 
 {% if page.image %}
@@ -12,8 +12,14 @@ layout: default
 	{% endfor %}
 {% endif %}
 
+{% if page.link %}
+	{% for link in page.link %}
+		<p><a target="_blank" href="{{ link }}">{{ link | remove: "https://" }}</a></p>
+	{% endfor %}
+{% endif %}
+
 {% if page.author %}
-	<p>by {{ page.author }}</p>
+	<p>著者: {{ page.author }}</p>
 {% endif %}
 
 {{ content }}
