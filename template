@@ -3,7 +3,8 @@
 # Interactive Jekyll post CLI tool
 #
 
-import yaml,sys,os,re
+import sys,os,re
+
 from yaml import safe_dump
 from datetime import datetime
 
@@ -63,7 +64,7 @@ write = input('Write to file [ blog/' + POST['tags'] + '/_posts/' + fn + ' ]? [y
 if write == 'y':
     with open('blog/' + POST['tags'] + '/_posts/' + fn, 'a') as f:
         f.write(safe_dump(POST, sort_keys=False, explicit_start=True, explicit_end=True) + CONTENT)
-        print("Done.")
+    print("Done.")
 
 sys.exit(0)
 
