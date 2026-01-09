@@ -19,7 +19,11 @@ layout: default
 {% endif %}
 
 {% if page.author %}
-	<p>著者: {{ page.author }}</p>
+	<p>作家: {{ page.author }}</p>
 {% endif %}
+
+{% if page.rating %}
+	<p>評点: {{ page.rating }}</p>
+{% endif %}}
 
 {{ content }}

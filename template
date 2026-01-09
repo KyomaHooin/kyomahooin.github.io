@@ -3,82 +3,67 @@
 # Interactive Jekyll post CLI tool
 #
 
-import sys,os,re
+import yaml,sys,os,re
+from yaml import safe_dump
 from datetime import datetime
 
-VERSION='1.2'
+VERSION='1.3'
 
 TAG=['tech','cyber','poi','book','sound','other']
 
-# DEF
+POST={'title':None,'layout':'post','tags':None,'date':datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')}
+
+CONTENT = ''
+
+# INDEX
 
 def get_index(tag):
     index = 1
     for f in os.listdir('blog/'+ tag + '/_posts/'):
-        i = int(re.sub('.*' + tag + '-(.*)\.md','\\1', f))
+        i = int(re.sub('.*' + tag + '-(.*)\.md', '\\1', f))
         if i > index: index = i
     return str(index + 1)
 
-#----------------------------------------------------
+# MAIN
 
 print("\n-- Post composer "+ VERSION + " --\n")
 
-# HEADER
+while not POST['tags'] in TAG: POST['tags'] = input("tag: ")
+while not POST['title']: POST['title'] = input("title: ")
 
-header,title,author,media,rating,tag = '','','',''
+for attr in ['rating','author','media']:
+    val = input(attr +  ': ')
+    if val: POST[attr] = val
 
-while not tag in TAG: tag = input("Tag: ")
-while not title: title = input("Title: ")
-if tag in ['poi','book','sound']: author = input("Author: ")
-if tag in ['poi','sound']: media = input("Media: ")
-if tag == 'book': rating = input("Rating: ")
+for attr in ['image','link']:
+    while True:
+        val = input(attr +  ': ')
+        if not val: break
+        if attr not in POST:
+            POST[attr] = [val]
+        else:
+            POST[attr].append(val)
 
-header += '---' + '\n'
-header +='title: ' + title + '\n'
-if author: header +='author: ' + author + '\n'
-if media: header +='media: ' + media + '\n'
-if rating: header += 'rating: ' + rating + '\n'
+while True:
+    line = input("text: ")
+    if not line: break
+    CONTENT += "\n" + line + "\n"
 
-header += 'layout: post\n'
-header += 'tags: ' + tag + '\n'
-header += 'date: ' + datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S') + '\n'
-header += '---' + '\n'
-
-# CONTENT
-
-content,text = '',''
-
-while 1:
-    image = input("Insert image URL: ")
-    if image == '.': break
-    if image: content += '<img width="200" src="' + image + '" />\n'
-while 1:
-    link = input("Insert link URL: ")
-    if link == '.': break
-    if link: content += '\n<a target="_blank" href="' + link + '">' + re.sub('.*://','',link) + '</a>\n'
-while 1:
-    line = input("Insert text: ")
-    if line == '.': break
-    if line: text += line + '\n'
-
-if text: content += '\n' +  text + '\n'
-    
 # PREVIEW
 
 preview = input("\nShow preview? [y/n]: ")
-if preview == 'y': print(header + content)
+if preview == 'y':
+    print(safe_dump(POST, sort_keys=False, explicit_start=True, explicit_end=True) + CONTENT)
 
 # WRITE
 
-fn = datetime.utcnow().strftime('%Y-%m-%d') + '-' + tag + '-' + get_index(tag) +'.md'
-write = input('Write to file [ blog/' + tag + '/_posts/' + fn + ' ]? [y/n]: ')
+fn = datetime.utcnow().strftime('%Y-%m-%d') + '-' + POST['tags'] + '-' + get_index(POST['tags']) +'.md'
+
+write = input('Write to file [ blog/' + POST['tags'] + '/_posts/' + fn + ' ]? [y/n]: ')
 if write == 'y':
-    try:
-        f = open('blog/' +tag + '/_posts/' + fn, 'a')
-        f.write(header + content)
-        f.close()
+    with open('blog/' + POST['tags'] + '/_posts/' + fn, 'a') as f:
+        f.write(safe_dump(POST, sort_keys=False, explicit_start=True, explicit_end=True) + CONTENT)
         print("Done.")
-    except:
-        print("Write error.")
 
 sys.exit(0)
+
