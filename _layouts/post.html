@@ -8,7 +8,7 @@ layout: default
 
 {% if page.image %}
 	{% for img in page.image %}
-		<p><img class="img-fluid" src="{{ img }}"></p>
+		<p><img class="img-fluid" onerror="this.onerror=null;this.src='/no-image.svg';" src="{{ img }}"></p>
 	{% endfor %}
 {% endif %}
 
