@@ -29,10 +29,17 @@ def get_index(tag):
 
 print("\n-- Post composer "+ VERSION + " --\n")
 
+print("[EXAMPLE]\n")
+print("tag: book")
+print("title: Samaple")
+print("author: Nantoka Taro")
+print("rating 5.0")
+print("image: https://url.tld/img.ext\n")
+
 while not POST['tags'] in TAG: POST['tags'] = input("tag: ")
 while not POST['title']: POST['title'] = input("title: ")
 
-for attr in ['rating','author','media']:
+for attr in ['author','rating','media']:
     val = input(attr +  ': ')
     if val: POST[attr] = val
 
