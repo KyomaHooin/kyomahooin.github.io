@@ -9,11 +9,8 @@ from yaml import safe_dump
 from datetime import datetime
 
 VERSION='1.3'
-
 TAG=['tech','cyber','poi','book','sound','other']
-
 POST={'title':None,'layout':'post','tags':None,'date':datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')}
-
 CONTENT=''
 
 # INDEX
