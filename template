@@ -14,7 +14,7 @@ TAG=['tech','cyber','poi','book','sound','other']
 
 POST={'title':None,'layout':'post','tags':None,'date':datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')}
 
-CONTENT = ''
+CONTENT=''
 
 # INDEX
 
@@ -58,7 +58,7 @@ if preview == 'y':
 
 # WRITE
 
-fn = datetime.utcnow().strftime('%Y-%m-%d') + '-' + POST['tags'] + '-' + get_index(POST['tags']) +'.md'
+fn = datetime.utcnow().strftime('%Y-%m-%d') + '-' + POST['tags'] + '-' + get_index(POST['tags']) + '.md'
 
 write = input('Write to file [ blog/' + POST['tags'] + '/_posts/' + fn + ' ]? [y/n]: ')
 if write == 'y':
