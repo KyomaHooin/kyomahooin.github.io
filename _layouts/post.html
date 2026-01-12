@@ -3,12 +3,13 @@ layout: default
 ---
 
 {% if page.media %}
-	<p class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/{{ page.media }}" allowfullscreen="true"></iframe></p>
+	<p class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/{{ page.media }}" allow="fullscreen"></iframe></p>
 {% endif %}
 
 {% if page.image %}
 	{% for img in page.image %}
-		<p><img class="img-fluid" onerror="this.onerror=null;this.src='/no-image.svg';" src="{{ img }}"></p>
+		{% assign img_name = img | split: "/" | last %}
+		<p><img class="img-fluid" onerror="this.onerror=null;this.src='/no-image.svg';" src="{{ img }}" alt="{{ img_name }}"></p>
 	{% endfor %}
 {% endif %}
 
