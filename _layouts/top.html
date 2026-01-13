@@ -4,3 +4,16 @@ layout: default
 
 {{ content }}
 
+{%- assign books = site.categories.book | where: "rating" | sort: "rating" | reverse -%}
+
+<table class="table table-dark table-borderless table-sm">
+  <tbody>
+   {%- for post in books -%}
+    <tr class="d-flex justify-content-start">
+      <td class="py-0 text-nowrap"> - {{ post.rating }} ]</td>
+      <td class="py-0"><a class="post" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
+    </tr>
+  {%- endfor -%}
+  </tbody>
+</table>
+
