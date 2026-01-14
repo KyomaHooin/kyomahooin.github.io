@@ -9,7 +9,7 @@ layout: default
 {% if page.image %}
 	{% for img in page.image %}
 		{% assign img_name = img | split: "/" | last %}
-		<p><img class="img-fluid" onerror="this.onerror=null;this.src='/no-image.svg';" src="{{ img }}" alt="{{ img_name }}"></p>
+		<p><img class="img-fluid" onerror="this.onerror=null;this.src='/assets/no-image.svg';" src="{{ img }}" alt="{{ img_name }}"></p>
 	{% endfor %}
 {% endif %}
 

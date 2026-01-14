@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {%- include head.html -%}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ "custom.css" | relative_url }}">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  </head>
 
   <body>
-   <div class="container">
-   <div class="row my-4 justify-content-center">
-   <div class="col col-lg-7 text-light font-monospace">
+    <div class="container">
+    <div class="row my-4 justify-content-center">
+    <div class="col col-lg-7 text-light font-monospace">
 
-      {%- include header.html -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+
+    <header>
+      <nav class="nav nav-pills py-1 justify-content-lg-end justify-content-center">
+       {%- for path in page_paths -%}
+         {%- assign menu_page = site.pages | where: "path", path | first -%}
+         {%- if menu_page.title -%}
+           {% if page.tags contains menu_page.layout or page.name contains menu_page.layout %}
+             <a class="nav-link text-light my-1 active" aria-current="page" href="{{ menu_page.url | relative_url }}">{{ menu_page.title | escape }}</a>
+           {% else %}
+             <a class="nav-link my-1 text-light" href="{{ menu_page.url | relative_url }}">{{ menu_page.title | escape }}</a>
+           {%- endif -%}
+         {%- endif -%}
+       {%- endfor -%}
+      </nav>
+    </header>
 
     <main class="my-4 mx-1">
       {{ content }}
     </main>
 
-    {%- include footer.html -%}
-
+    <footer>
+      <div class="pi text-end" onclick="pi()">{{ site.footer }}</div>
+    </footer>
+   
     </div>
     </div>
     </div>
-  <script src="/custom.js"></script>
+    <script src="/custom.js"></script>
   </body>
 </html>
+
