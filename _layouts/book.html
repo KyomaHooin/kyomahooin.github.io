@@ -26,7 +26,7 @@ layout: default
   <tbody>
     {%- for book in books -%}
      <tr class="d-flex justify-content-start">
-	<td class="py-0"> - [ {{ book.author }} ]</td>
+	<td class="py-0 text-nowrap"> - [ {{ book.author }} ]</td>
 	<td class="py-0">{{ book.title }}</td>
      </tr>
     {%- endfor -%}
