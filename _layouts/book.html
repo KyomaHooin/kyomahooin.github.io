@@ -17,3 +17,20 @@ layout: default
   </tbody>
   </table>
 {%- endif -%}
+
+<p>[<strong>本棚</strong>]</p>
+
+{%- if site.data.shelf.size > 0 -%}
+  {%- assign books = site.data.shelf | sort: "author" -%}
+  <table class="table table-dark table-borderless table-sm">
+  <tbody>
+    {%- for book in books -%}
+     <tr class="d-flex justify-content-start">
+	<td class="py-0 text-nowrap"> - [ {{ book.author }} ]</td>
+	<td class="py-0">{{ book.title }}</td>
+     </tr>
+    {%- endfor -%}
+  </tbody>
+  </table>
+{%- endif -%}
+
