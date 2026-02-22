@@ -6,11 +6,11 @@
 import sys,os,re
 
 from yaml import safe_dump
-from datetime import datetime
+from datetime import datetime,timezone
 
 VERSION='1.3'
 TAG=['tech','cyber','poi','book','sound','other']
-POST={'title':None,'layout':'post','tags':None,'date':datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')}
+POST={'title':None,'layout':'post','tags':None,'date':datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S')}
 CONTENT=''
 
 # INDEX
@@ -18,7 +18,7 @@ CONTENT=''
 def get_index(tag):
     index = 1
     for f in os.listdir('blog/'+ tag + '/_posts/'):
-        i = int(re.sub('.*' + tag + '-(.*)\.md', '\\1', f))
+        i = int(re.sub('.*' + tag + '-(.*)\\.md', '\\1', f))
         if i > index: index = i
     return str(index + 1)
 
@@ -62,7 +62,7 @@ if preview == 'y':
 
 # WRITE
 
-fn = datetime.utcnow().strftime('%Y-%m-%d') + '-' + POST['tags'] + '-' + get_index(POST['tags']) + '.md'
+fn = datetime.now(timezone.utc).strftime('%Y-%m-%d') + '-' + POST['tags'] + '-' + get_index(POST['tags']) + '.md'
 
 write = input('Write to file [ blog/' + POST['tags'] + '/_posts/' + fn + ' ]? [y/n]: ')
 if write == 'y':
