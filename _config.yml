@@ -9,3 +9,9 @@ header_pages:
         - pages/other.md
 
 footer: '&#960;'
+
+collections:
+	test2:
+	test3:
+	  output: true
+
