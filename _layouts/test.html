@@ -39,7 +39,7 @@
 	<p>FILES:</p>
 	  <ul>
            {%- for file in site.static_files -%}
-             {%- if file.path contains page.dir -%}
+             {%- if file.path == page.dir | append: file.name -%}
                <li>{{file.name}}</li> 
              {%- endif -%}
            {%- endfor -%}
