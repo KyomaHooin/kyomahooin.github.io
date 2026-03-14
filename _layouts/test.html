@@ -32,11 +32,6 @@
     </header>
 
     <main class="my-4 mx-1">
-        {%- assign col = page.collection -%}
-	<p>col: {{col}}</p>
-	<p>sites.col.label: {{sites.test2.label}}</p>
-	<p>sites.col.relative_directory: {{sites.test2.relative_directory}}</p>
-	<p>sites.col.directory: {{sites.test2.directory}}</p>
 	<p>page.url: {{page.url}}</p>
 	<p>page.path: {{page.path}}</p>
 	<p>page.dir: {{page.dir}}</p>
@@ -45,18 +40,11 @@
 	  <ul>
            {%- for file in site.static_files -%}
              {%- if file.path contains page.dir -%}
-               <li>{{file}}</li> 
+               <li>{{file.name}}</li> 
              {%- endif -%}
            {%- endfor -%}
           </ul>
 
-	<p>FILES:</p>
-
-          <ul>
-           {%- for file in site.test2.files -%}
-             <li>{{file}}</li> 
-           {%- endfor -%}
-          </ul>
       {{ content }}
     </main>
 

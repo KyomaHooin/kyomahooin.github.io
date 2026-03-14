@@ -10,6 +10,3 @@ header_pages:
 
 footer: '&#960;'
 
-collections:
-  test2:
-    output: true
