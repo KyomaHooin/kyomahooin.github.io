@@ -33,11 +33,14 @@
 
     <main class="my-4 mx-1">
          {%- assign col = page.collection -%}
-	<p>{{sites.col.label}}</p>
-	<p>{{sites.col.relative_directory}}</p>
-	<p>{{sites.col.directory}}</p>
-	<p>{{page.url}}</p>
-	<p>{{page.path}}</p>
+	<p>col: {{col}}</p>
+	<p>sites.col.label: {{sites.col.label}}</p>
+	<p>sites.col.relative_directory: {{sites.col.relative_directory}}</p>
+	<p>sites.col.directory: {{sites.col.directory}}</p>
+	<p>page.url: {{page.url}}</p>
+	<p>page.path: {{page.path}}</p>
+
+	<p>FILES:</p>
 
           <ul>
            {%- for file in site.col.files -%}
