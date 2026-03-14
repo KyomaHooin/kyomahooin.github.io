@@ -11,5 +11,6 @@ header_pages:
 footer: '&#960;'
 
 collections:
-        - test2
-
+  test2:
+    output: true
+    permalink: /:collection/:path/
