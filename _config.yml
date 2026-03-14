@@ -11,8 +11,5 @@ header_pages:
 footer: '&#960;'
 
 collections:
-	test2:
-	  name: test2
-	test3:
-	  output: true
+	- test2
 
