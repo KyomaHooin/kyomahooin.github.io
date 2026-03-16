@@ -1,0 +1,48 @@
+[pattern_t.png]
+
+- ISOLATION	CIRCLE
+- BASIC		CIRCLE
+- ELBOW		CIRCLE
+- LONG ARM	CIRCLE
+
+##############
+# UNIT CLASS #
+##############
+
+[unit_t.png]
+
+-SNAKE
+-1.5
+-HYBRID
+-CAT EYE
+-SUPERSPIN
+
+################
+# FLOWER CLASS #
+################
+
+[circle_t.png]
+
+-S
+-AS
+-COMPOUND
+-PARACIRCLE
+
+##############
+#  ARC CLASS #
+##############
+
+[arc_t.png]
+
+-STILL
+-PENDULUM
+-GILLIGAN
+
+#################
+# TRAMMEL CLASS #
+#################
+
+[trammel_t.png]
+
+-TRAMMEL
+-SUPERSPIN
