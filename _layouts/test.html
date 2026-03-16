@@ -38,27 +38,21 @@
 
 	<p>DIRS:</p>
 	  <ul>
-           {%- comment -%}
            {%- assign dir_depth = page.dir | split: '/' | size | plus: 1 -%}
-           {%- assign dir_name = "" -%}
-
-           {%- for file in site.static_files -%}
-             {%- if file.path contains page.dir -%}
-               {%- assign file_depth = file.path | split: '/' | size -%}
-               {%- if file_depth == dir_depth -%}
-                  <li>{{file.path}}</li> 
-               {%- endif -%}
+           {%- for file in site.static_files | where_exp: "item", item.path contains page.dir -%}
+             {%- assign file_depth = file.path | split: '/' | size -%}
+             {%- if file_depth == dir_depth -%}
+                <li>{{ file.path | split: '/' | pop | last }}</li> 
              {%- endif -%}
            {%- endfor -%}
-           {%- endcomment -%}
           </ul>
 
 	<p>FILES:</p>
 	  <ul>
            {%- for file in site.static_files | where_exp: "item", item.path contains page.dir -%}
-               {%- assign file_path = page.dir | append: file.name -%}
-               {%- if file.path == file_path -%}
-                  <li><a href="{{ file.path }}">{{ file.name }}</a></li> 
+              {%- assign file_path = page.dir | append: file.name -%}
+              {%- if file.path == file_path -%}
+                 <li><a href="{{ file.path }}">{{ file.name }}</a></li> 
               {%- endif -%}
            {%- endfor -%}
           </ul>
