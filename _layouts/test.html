@@ -35,23 +35,17 @@
 
         <p>DIRS:</p>
 	  <ul>
-           {%- assign dir_depth = page.dir | split: '/' | size | plus: 2 -%}
-
-           <p>URL</p>
-           <p>page.dir: {{page.dir}}</p>
-           <p>page.url: {{page.url}}</p>
-           <p>page.path: {{page.path}}</p>
-
-           <p>DEPTH</p>
-           <p>{{ page.dir | split: '/' | size }}</p>
-           <p>{{ page.url | split: '/' | size }}</p>
-           <p>{{ page.path | split: '/' | size }}</p>
-
+           {%- assign subfolder_depth = page.dir | split: '/' | size | plus: 2 -%}
+           {%- assign prev_subfolder = "" -%}
            {%- for file in site.static_files -%}
              {%- if file.path contains page.dir -%}
                {%- assign file_depth = file.path | split: '/' | size -%}
-               {%- if file_depth == dir_depth -%}
-                  <li><a href="{{ file.path | remove: file.name }}">{{ file.path | split: '/' | pop | last }}</a></li> 
+               {%- if file_depth == subfolder_depth -%}
+                 {%- assign next_subfolder = file.path | split: '/' | pop | last -%}
+                 {%- if next_subfolder != prev_subfolder -%}
+                    <li><a href="{{ file.path | remove: file.name }}">{{ next_subfolder }}</a></li> 
+                    {%- prev_subfolder = next_subfolder -%}
+                 {%- endif -%}
                {%- endif -%}
              {%- endif -%}
            {%- endfor -%}
