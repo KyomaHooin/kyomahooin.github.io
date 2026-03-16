@@ -32,37 +32,39 @@
     </header>
 
     <main class="my-4 mx-1">
-	<p>page.url: {{page.url}}</p>
-	<p>page.path: {{page.path}}</p>
-	<p>page.dir: {{page.dir}}</p>
 
-	<p>DIRS:</p>
+        <p>DIRS:</p>
 	  <ul>
-           {%- assign dir_depth_def = page.dir | split: '/' | size -%}
-           {%- assign dir_depth = page.dir | split: '/' | size | plus: 1 -%}
+           {%- assign dir_depth = page.dir | split: '/' | size | plus: 2 -%}
 
+           <p>URL</p>
            <p>page.dir: {{page.dir}}</p>
-           <p>dir_depth_def: {{ dir_depth_def }}</p>
-           <p>dir_depth: {{ dir_depth }}</p>
+           <p>page.url: {{page.url}}</p>
+           <p>page.path: {{page.path}}</p>
 
-           {%- for file in site.static_files | where_exp: "file", file.path contains page.dir -%}
-             {%- assign file_depth = file.path | split: '/' | size -%}
+           <p>DEPTH</p>
+           <p>{{ page.dir | split: '/' | size }}</p>
+           <p>{{ page.url | split: '/' | size }}</p>
+           <p>{{ page.path | split: '/' | size }}</p>
 
-             <p>file_path: {{ file.path }}</p>
-             <p>file_depth: {{ file_depth }}</p>
-
-             {%- if file_depth == dir_depth -%}
-                <li>{{ file.path | split: '/' | pop | last }}</li> 
+           {%- for file in site.static_files -%}
+             {%- if file.path contains page.dir -%}
+               {%- assign file_depth = file.path | split: '/' | size -%}
+               {%- if file_depth == dir_depth -%}
+                  <li><a href="{{ file.path | remove: file.name }}">{{ file.path | split: '/' | pop | last }}</a></li> 
+               {%- endif -%}
              {%- endif -%}
            {%- endfor -%}
           </ul>
 
 	<p>FILES:</p>
 	  <ul>
-           {%- for file in site.static_files | where_exp: "item", item.path contains page.dir -%}
-              {%- assign file_path = page.dir | append: file.name -%}
-              {%- if file.path == file_path -%}
-                 <li><a href="{{ file.path }}">{{ file.name }}</a></li> 
+           {%- for file in site.static_files -%}
+              {%- if file.path contains page.dir -%}
+                {%- assign file_path = page.dir | append: file.name -%}
+                {%- if file.path == file_path -%}
+                   <li><a href="{{ file.path }}">{{ file.name }}</a></li> 
+                {%- endif -%}
               {%- endif -%}
            {%- endfor -%}
           </ul>
