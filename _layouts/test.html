@@ -39,11 +39,33 @@
 	<p>FILES:</p>
 	  <ul>
            {%- for file in site.static_files -%}
-             {%- if file.path == page.dir | append: file.name -%}
-               <li>{{file.name}}</li> 
-             {%- endif -%}
+              {%- if file.path contains page.dir -%}
+                 {%- assign file_path = page.dir | append: file.name -%}
+                 {%- if file.path == file_path -%}
+                    <li>{{file.name}}</li> 
+                 {%- endif -%}
+              {%- endif -%}
            {%- endfor -%}
           </ul>
+
+	<p>DIRS:</p>
+	  <ul>
+           {%- comment -%}
+           {%- assign dir_depth = page.dir | split: '/' | size | plus: 1 -%}
+           {%- assign dir_name = "" -%}
+
+           {%- for file in site.static_files -%}
+             {%- if file.path contains page.dir -%}
+               {%- assign file_depth = file.path | split: '/' | size -%}
+               {%- if file_depth == dir_depth -%}
+                  <li>{{file.path}}</li> 
+               {%- endif -%}
+             {%- endif -%}
+           {%- endfor -%}
+           {%- endcomment -%}
+          </ul>
+
+
 
       {{ content }}
     </main>
