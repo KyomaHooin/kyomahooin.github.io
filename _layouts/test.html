@@ -33,7 +33,6 @@
 
     <main class="my-4 mx-1">
 
-        <p>DIRS:</p>
 	  <ul>
            {%- assign subfolder_depth = page.dir | split: '/' | size | plus: 2 -%}
            {%- assign prev_subfolder = "" -%}
@@ -43,16 +42,13 @@
                {%- if file_depth == subfolder_depth -%}
                  {%- assign next_subfolder = file.path | split: '/' | pop | last -%}
                  {%- if next_subfolder != prev_subfolder -%}
-                    <li><a href="{{ file.path | remove: file.name }}">{{ next_subfolder }}</a></li> 
-                    {%- prev_subfolder = next_subfolder -%}
+                    <li><a href="{{ file.path | remove: file.name }}">{{ next_subfolder }}/</a></li> 
+                    {%- assign prev_subfolder = next_subfolder -%}
                  {%- endif -%}
                {%- endif -%}
              {%- endif -%}
            {%- endfor -%}
-          </ul>
-
-	<p>FILES:</p>
-	  <ul>
+          
            {%- for file in site.static_files -%}
               {%- if file.path contains page.dir -%}
                 {%- assign file_path = page.dir | append: file.name -%}
