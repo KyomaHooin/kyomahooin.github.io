@@ -38,11 +38,14 @@
 
 	<p>DIRS:</p>
 	  <ul>
+           {%- assign dir_depth_def = page.dir | split: '/' | size -%}
            {%- assign dir_depth = page.dir | split: '/' | size | plus: 1 -%}
 
+           <p>page.dir: {{page.dir}}</p>
+           <p>dir_depth_def: {{ dir_depth_def }}</p>
            <p>dir_depth: {{ dir_depth }}</p>
 
-           {%- for file in site.static_files | where_exp: "item", item.path contains page.dir -%}
+           {%- for file in site.static_files | where_exp: "file", file.path contains page.dir -%}
              {%- assign file_depth = file.path | split: '/' | size -%}
 
              <p>file_path: {{ file.path }}</p>
