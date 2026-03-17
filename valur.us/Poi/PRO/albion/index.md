@@ -1,3 +1,4 @@
 ---
 layout: valurus
+tags: poi
 ---
