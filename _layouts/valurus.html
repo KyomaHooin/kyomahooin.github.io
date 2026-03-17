@@ -34,7 +34,7 @@
     <main class="my-4 mx-1">
 
 	 <ul>
-           <li><a href="{{ page.dir | split: '/' | pop | join: "/" -}}">Parent Directory</a>
+           <li><img classs="img-fluid" src="/assets/valur.us/icons/back.gif"><a href="{{ page.dir | split: '/' | pop | join: "/" }}">Parent Directory</a></li>
 
            {%- assign page_depth = page.dir | split: '/' | size | plus: 1 -%}
            {%- assign prev_subfolder = "" -%}
@@ -56,7 +56,7 @@
                  {%- endfor -%}
 
                  {%- if next_subfolder != prev_subfolder -%}
-                    <li><a href="{{ next_subfolder | join: "/" }}">{{ next_subfolder | last }}</a></li> 
+                    <li><img style="img-fluid" src="/assets/valur.us/icon/folder.gif"><a href="{{ next_subfolder | join: "/" }}">{{ next_subfolder | last }}</a></li> 
                     {%- assign prev_subfolder = next_subfolder -%}
                  {%- endif -%}
                {%- endif -%}
@@ -67,12 +67,23 @@
            {%- for file in site.static_files -%}
              {%- if file.path contains page.dir -%}
 
-               {%- comment -%}
                {%- assign file_path = page.dir | append: file.name -%}
                {%- if file.path == file_path -%}
-                 <li><a href="{{ file.path }}">{{ file.name }}</a></li> 
+                 <li>
+                 {%- case file.extname -%}
+                   {%- when ".pdf", ".txt", ".doc", ".docx" -%}
+                     <img classs="img-fluid" src="/assets/valur.us/icons/layout.gif">
+                   {%- when ".png", ".gif", ".jpg", ".jpeg" -%}
+                     <img classs="img-fluid" src="/assets/valur.us/icons/image.gif">
+                   {%- when ".zip", ".tar", ".gz", ".gzip", ".rar" -%}
+                     <img classs="img-fluid" src="/assets/valur.us/icons/compressed.gif">
+                   {%- when ".exe", ".iso" -%}
+                     <img classs="img-fluid" src="/assets/valur.us/icons/binary.gif">
+                   {%- else -%}
+                     <img classs="img-fluid" src="/assets/valur.us/icons/unknown.gif">
+                 {%- endcase -%}
+                 <a href="{{ file.path }}">{{ file.name }}</a></li> 
                {%- endif -%}
-               {%- endcomment -%}
 
              {%- endif -%}
            {%- endfor -%}
