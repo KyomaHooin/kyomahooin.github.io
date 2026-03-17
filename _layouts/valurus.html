@@ -35,7 +35,7 @@
 
     <div class="col p-3 bg-light">
 
-    <p class="h2 fw-bold text-black">Index of {{ page.dir | split: '/' | last }}</p>
+    <p class="h2 fw-bold text-black">Index of {{ page.dir | split: '/' | last }}/</p>
 
     <table class="table table-light table-borderless table-sm border-bottom border-dark">
     <thead class="border-bottom border-dark">
@@ -45,6 +45,10 @@
       </tr>
     </thead>
     <tbody>
+      <tr class="d-flex justify-content-start">
+         <td class="py-1 bg-light"><img class="img-fluid" src="/assets/valur.us/icons/back.gif"></td>
+         <td class="py-1 bg-light"><a class="text-dark" href="{{ page.dir | split: '/' | pop | join: "/" }}">Parent Directory</a></td>
+      </tr>
 
            {%- assign page_depth = page.dir | split: '/' | size | plus: 1 -%}
            {%- assign prev_subfolder = "" -%}
