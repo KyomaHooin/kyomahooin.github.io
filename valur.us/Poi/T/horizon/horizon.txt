@@ -1,0 +1,38 @@
+#################
+# SPLIT HORIZON #
+#################
+
+
+                          FRAME
+      CROSS-OVER(D)      /
+    /                  /
+   /
+                      |  /
+ |                    | / ---- MIRROR
+ |               _____|/
+ |   /              \
+ |  / ---REEL(B)     \
+ | /                   TURN
+   _________
+       
+        \
+         \
+           CLOCK's(LONG ARM)
+
+##########
+# SOURCE #
+##########
+
+http://en.wikipedia.org/wiki/Framing_(social_sciences)#Frame-manipulation_research
+http://en.wikipedia.org/wiki/Ballroom_glossary#Frame
+http://en.wikipedia.org/wiki/Visual_routine
+
+300534
+106735
+746963
+855826 
+510361
+
+---------------
+
+:R
