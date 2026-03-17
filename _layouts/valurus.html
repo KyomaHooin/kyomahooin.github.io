@@ -43,7 +43,7 @@
                {%- assign file_depth = file.path | split: '/' | size -%}
                {%- assign depth_diff = file_depth | minus: page_depth -%}
 
-               {%- if file_depth >= subfolder_depth -%}
+               {%- if file_depth >= page_depth -%}
 
                  <p>page_dir: {{ page.dir }}</p>
                  <p>file_path: {{ file.path }}</p>
