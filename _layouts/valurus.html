@@ -42,13 +42,14 @@
 
                {%- assign file_depth = file.path | split: '/' | size -%}
                {%- assign depth_diff = file_depth | minus: subfolder_depth -%}
-      
+
                {%- if file_depth >= subfolder_depth -%}
-                
+
                  <p>page_dir: {{ page.dir }}</p>
                  <p>file_path: {{ file.path }}</p>
-                 <p>subfolder_depth: {[ subfolder_depth }}</p>
+                 <p>subfolder_depth: {{ subfolder_depth }}</p>
                  <p>file_depth: {{ file_depth }}</p>
+                 <p>deth_diff: {{ depth_diff }}</p>
 
                  {%- assign next_subfolder = file.path | split: '/' -%}
 
@@ -65,16 +66,16 @@
                  {%- endif -%}
                {%- endif -%}
 
+
+               {%- comment -%}
+               {%- assign file_path = page.dir | append: file.name -%}
+               {%- if file.path == file_path -%}
+                 <li><a href="{{ file.path }}">{{ file.name }}</a></li> 
+               {%- endif -%}
+               {%- endcomment -%}
+
+
              {%- endif -%}
-           {%- endfor -%}
-          
-           {%- for file in site.static_files -%}
-              {%- if file.path contains page.dir -%}
-                {%- assign file_path = page.dir | append: file.name -%}
-                {%- if file.path == file_path -%}
-                   <li><a href="{{ file.path }}">{{ file.name }}</a></li> 
-                {%- endif -%}
-              {%- endif -%}
            {%- endfor -%}
           </ul>
 
