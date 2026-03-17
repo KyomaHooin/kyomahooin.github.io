@@ -1,0 +1,233 @@
+#########
+ CODE RED 
+#########
+
+-----------------
+Mel's cross
+-----------------
+
+[Wall] straight arm crossing.
+
+------
+Cap
+------
+
+Continuous assembly pattern, or [half circle] hands same, Poi opposite.
+
+----------------
+Triquetras
+----------------
+
+[Trifoil] extension.
+
+----------------
+The Canoe
+----------------
+
+[1.5] with extra beat on each side with head interaction.
+
+----------------
+Moose eye
+----------------
+
+[Master path] [cat eye] trace.
+
+----------------
+Snake eye
+----------------
+
+[Cat-eye] in [snake] motion.
+
+-------------------
+Straight line
+-------------------
+
+Dual vertical [trammel] stack.
+
+---------------------
+G's Maddness
+---------------------
+
+Dual vertial isolated switch.
+
+----------
+Voltex
+----------
+
+[Spiral] around one hand.
+
+-----------
+Cosmo
+-----------
+
+S. [meltdown].
+
+----------
+Archer
+----------
+
+S. [longarm].
+
+---------
+Linear
+---------
+
+Vetical [pattern] [horizontal] symetry.
+
+--------
+Slide
+--------
+
+S. [Shot].
+
+---------
+Horse
+---------
+
+[Stance] with legs bended.
+
+--------------------
+Jumping jack 
+--------------------
+
+Double [kick] with jump.
+
+-----------
+Master 
+-----------
+
+The [path] hand travel through time.
+
+-----------------
+Polymetric
+-----------------
+
+[Polyrhythm] by [circle].
+
+----------------
+Unit circle
+----------------
+
+Hand [circle].
+
+--------------
+Meetings
+--------------
+
+Where the Poi [head] meet.
+
+---------------------
+Switch / Shift
+---------------------
+
+[Horizontal] to [vertical] [still].
+
+--------------
+Phantom
+--------------
+
+[Full] [hybrid].
+
+-------------
+Fraction
+-------------
+
+[Polyrhythm] within single [beat].
+
+
+-------------------------
+Dragon's tongue
+-------------------------
+
+Slack, like whip crack.
+
+------
+Tap
+------
+
+Old Maori [move].
+
+--------------
+Take out
+--------------
+
+S. [extension].
+
+--------
+Float
+--------
+
+[Stop] [stall] fall down.
+
+--------------
+Infinitite
+--------------
+
+S. [continual].
+
+-------------
+Wind up
+-------------
+
+[Loop] double [wrap].
+
+-------
+Shot
+-------
+
+Slippering [wrap].
+
+---------------
+Hangman
+---------------
+
+S. [snag].
+
+--------
+Snag
+--------
+
+[Stand] [hangman].
+
+-------------
+Oli loop
+-------------
+
+[Loop] [bouce].
+
+---------------
+Paracircle
+---------------
+
+Half [circle] [spin] with [len].
+
+-------
+Lens
+-------
+
+[Paracircle] hand move.
+
+--------------------
+Bidirectional
+--------------------
+
+Move that resemble the same [path] both [direction].
+
+#######
+ SOURCE
+#######
+
+http://techpoi.tribe.net
+http://homeofpoi.com
+http://domporepoi.com
+http://fireshow.de
+
+####
+ END
+####
+
+0 75 80 1284 536399 86493410
+
+thx community,
+
+:R

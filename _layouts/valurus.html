@@ -39,16 +39,22 @@
       
            {%- for file in site.static_files -%}
              {%- if file.path contains page.dir -%}
-      
+
                {%- assign file_depth = file.path | split: '/' | size -%}
                {%- assign depth_diff = file_depth | minus: subfolder_depth -%}
       
                {%- if file_depth >= subfolder_depth -%}
                 
+                 <p>page_dir: {{ page.dir }}</p>
+                 <p>file_path: {{ file.path }}</p>
+                 <p>subfolder_depth: {[ subfolder_depth }}</p>
+                 <p>file_depth: {{ file_depth }}</p>
+
                  {%- assign next_subfolder = file.path | split: '/' -%}
 
-                 {%- for i in range (0..depth_diff) -%}
+                 {%- for i in range (1..depth_diff) -%}
                    {%- assign next_subfolder = next_subfolder | pop -%}
+                   <p>sub_pop: {{ next_subfolder }}</p>
                  {%- endfor -%}
 
                  {%- assign next_subfolder = next_subfolder | last -%}
