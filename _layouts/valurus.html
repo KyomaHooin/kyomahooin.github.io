@@ -35,7 +35,7 @@
 
     <div class="col p-3 bg-light">
 
-    <p class="h2 fw-bold text-black">Index of {{ page.dir }}/</p>
+    <p class="h2 fw-bold text-black">Index of {{ page.dir | split: '/' | shift | join: '/' }}</p>
 
     <table class="table table-light table-borderless table-sm border-bottom border-dark">
     <thead class="border-bottom border-dark">
@@ -47,7 +47,7 @@
     <tbody>
       <tr class="d-flex justify-content-start">
          <td class="py-1 bg-light"><img class="img-fluid" src="/assets/valur.us/icons/back.gif"></td>
-         <td class="py-1 bg-light"><a class="text-dark" href="{{ page.dir | split: '/' | pop | join: "/" }}">Parent Directory</a></td>
+         <td class="py-1 bg-light"><a class="text-dark" href="{{ page.dir | split: '/' | pop | join: '/' }}">Parent Directory</a></td>
       </tr>
 
            {%- assign page_depth = page.dir | split: '/' | size | plus: 1 -%}
@@ -72,7 +72,7 @@
                  {%- if next_subfolder != prev_subfolder -%}
                     <tr class="d-flex justify-content-start">
                       <td class="py-1 bg-light"><img class="img-fluid" src="/assets/valur.us/icons/folder.gif"></td>
-                      <td class="py-1 bg-light"><a class="text-black" href="{{ next_subfolder | join: "/" }}">{{ next_subfolder | last }}/</a></td>
+                      <td class="py-1 bg-light"><a class="text-black" href="{{ next_subfolder | join: '/' }}">{{ next_subfolder | last }}/</a></td>
                     </tr>
                     {%- assign prev_subfolder = next_subfolder -%}
                  {%- endif -%}
