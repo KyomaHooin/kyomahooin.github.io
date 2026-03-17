@@ -34,22 +34,22 @@
     <main class="my-4 mx-1">
 
 	  <ul>
-           {%- assign subfolder_depth = page.dir | split: '/' | size | plus: 2 -%}
+           {%- assign page_depth = page.dir | split: '/' | size -%}
            {%- assign prev_subfolder = "" -%}
       
            {%- for file in site.static_files -%}
              {%- if file.path contains page.dir -%}
 
                {%- assign file_depth = file.path | split: '/' | size -%}
-               {%- assign depth_diff = file_depth | minus: subfolder_depth -%}
+               {%- assign depth_diff = file_depth | minus: page_depth -%}
 
                {%- if file_depth >= subfolder_depth -%}
 
                  <p>page_dir: {{ page.dir }}</p>
                  <p>file_path: {{ file.path }}</p>
-                 <p>subfolder_depth: {{ subfolder_depth }}</p>
+                 <p>page_depth: {{ page_depth }}</p>
                  <p>file_depth: {{ file_depth }}</p>
-                 <p>deth_diff: {{ depth_diff }}</p>
+                 <p>depth_diff: {{ depth_diff }}</p>
 
                  {%- assign next_subfolder = file.path | split: '/' -%}
 
