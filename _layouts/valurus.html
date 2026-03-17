@@ -36,16 +36,29 @@
 	  <ul>
            {%- assign subfolder_depth = page.dir | split: '/' | size | plus: 2 -%}
            {%- assign prev_subfolder = "" -%}
+      
            {%- for file in site.static_files -%}
              {%- if file.path contains page.dir -%}
+      
                {%- assign file_depth = file.path | split: '/' | size -%}
-               {%- if file_depth == subfolder_depth -%}
-                 {%- assign next_subfolder = file.path | split: '/' | pop | last -%}
+               {%- assign depth_diff = file_depth | minus: subfolder_depth -%}
+      
+               {%- if file_depth >= subfolder_depth -%}
+                
+                 {%- assign next_subfolder = file.path | split: '/' -%}
+
+                 {%- for i in range (0..depth_diff) -%}
+                   {%- assign next_subfolder = next_subfolder | pop -%}
+                 {%- endfor -%}
+
+                 {%- assign next_subfolder = next_subfolder | last -%}
+
                  {%- if next_subfolder != prev_subfolder -%}
                     <li><a href="{{ file.path | remove: file.name }}">{{ next_subfolder }}/</a></li> 
                     {%- assign prev_subfolder = next_subfolder -%}
                  {%- endif -%}
                {%- endif -%}
+
              {%- endif -%}
            {%- endfor -%}
           
