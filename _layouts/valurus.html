@@ -33,7 +33,9 @@
 
     <main class="my-4 mx-1">
 
-	  <ul>
+	 <ul>
+           <li><a href="{{ page.dir | split: '/' | pop | join: "/" -}}">Parent Directory</a>
+
            {%- assign page_depth = page.dir | split: '/' | size | plus: 1 -%}
            {%- assign prev_subfolder = "" -%}
       
@@ -59,6 +61,12 @@
                  {%- endif -%}
                {%- endif -%}
 
+             {%- endif -%}
+           {%- endfor -%}
+ 
+           {%- for file in site.static_files -%}
+             {%- if file.path contains page.dir -%}
+
                {%- comment -%}
                {%- assign file_path = page.dir | append: file.name -%}
                {%- if file.path == file_path -%}
@@ -68,7 +76,7 @@
 
              {%- endif -%}
            {%- endfor -%}
-          </ul>
+         </ul>
 
       {{ content }}
     </main>
