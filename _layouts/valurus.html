@@ -43,40 +43,29 @@
                {%- assign file_depth = file.path | split: '/' | size -%}
                {%- assign depth_diff = file_depth | minus: page_depth -%}
 
-               {%- if file_depth >= page_depth -%}
-
-                 <p>page_dir: {{ page.dir }}</p>
-                 <p>file_path: {{ file.path }}</p>
-                 <p>page_depth: {{ page_depth }}</p>
-                 <p>file_depth: {{ file_depth }}</p>
-                 <p>depth_diff: {{ depth_diff }}</p>
+               {%- if file_depth > page_depth -%}
 
                  {%- assign next_subfolder = file.path | split: '/' -%}
                 
                  {%- assign range = (1..depth_diff) -%}
-                 <p>range: {{ range }}</p>
 
                  {%- for i in range -%}
                    {%- assign next_subfolder = next_subfolder | pop -%}
-                   <p>sub_pop: {{ next_subfolder }}</p>
                  {%- endfor -%}
 
+                 {%- assign next_link = next_subfolder -%}
                  {%- assign next_subfolder = next_subfolder | last -%}
 
                  {%- if next_subfolder != prev_subfolder -%}
-                    <li><a href="{{ file.path | remove: file.name }}">{{ next_subfolder }}/</a></li> 
+                    <li><a href="{{ next_link }}">{{ next_subfolder }}/</a></li> 
                     {%- assign prev_subfolder = next_subfolder -%}
                  {%- endif -%}
                {%- endif -%}
 
-
-               {%- comment -%}
                {%- assign file_path = page.dir | append: file.name -%}
                {%- if file.path == file_path -%}
                  <li><a href="{{ file.path }}">{{ file.name }}</a></li> 
                {%- endif -%}
-               {%- endcomment -%}
-
 
              {%- endif -%}
            {%- endfor -%}
