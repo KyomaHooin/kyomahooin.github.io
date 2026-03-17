@@ -34,7 +34,7 @@
     <main class="my-4 mx-1">
 
 	  <ul>
-           {%- assign page_depth = page.dir | split: '/' | size -%}
+           {%- assign page_depth = page.dir | split: '/' | size | plus: 1 -%}
            {%- assign prev_subfolder = "" -%}
       
            {%- for file in site.static_files -%}
@@ -52,8 +52,11 @@
                  <p>depth_diff: {{ depth_diff }}</p>
 
                  {%- assign next_subfolder = file.path | split: '/' -%}
+                
+                 {%- assign range = (1..depth_diff) -%}
+                 <p>range: {{ range }}</p>
 
-                 {%- for i in range (1..depth_diff) -%}
+                 {%- for i in range -%}
                    {%- assign next_subfolder = next_subfolder | pop -%}
                    <p>sub_pop: {{ next_subfolder }}</p>
                  {%- endfor -%}
