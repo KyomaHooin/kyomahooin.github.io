@@ -5,6 +5,6 @@ tags: poi
   <img class="img-fluid" src="Poi/PRO/code-red/code-red.png">
   <p class="text-black fw-bold my-3">Code Red (c) 2009 - Richee</p>
   <a href="Poi">
-    <img class="img-fluid" src="dir.png">
+    <img class="img-fluid" src="/assets/valur.us/icons/folder.gif">
   </a>
 </div>
