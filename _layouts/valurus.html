@@ -62,10 +62,8 @@
                {%- if file_depth > page_depth -%}
 
                  {%- assign next_subfolder = file.path | split: '/' -%}
-                
-                 {%- assign range = (1..depth_diff) -%}
 
-                 {%- for i in range -%}
+                 {%- for i in (1..depth_diff) -%}
                    {%- assign next_subfolder = next_subfolder | pop -%}
                  {%- endfor -%}
 
