@@ -5,7 +5,7 @@ permalink: /
 ---
 <img width="200" src="/assets/19186867.png" alt="okarin">
 
-**ブルナ・リチャード**
+**Richard Bruna**
 
 昭和57年生まれ。プラハ在住。
 
