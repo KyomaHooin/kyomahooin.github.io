@@ -15,7 +15,7 @@ layout: default
 
 {% if page.link %}
 	{% for link in page.link %}
-		<p><a target="_blank" href="{{ link }}">{{ link | remove: "https://" }}</a></p>
+		<p><a href="{{ link }}">{{ link | remove: "https://" }}</a></p>
 	{% endfor %}
 {% endif %}
 
