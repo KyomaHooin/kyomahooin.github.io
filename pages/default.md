@@ -3,7 +3,7 @@ title: About
 layout: default
 permalink: / 
 ---
-<img width="200" src="/assets/19186867.png" alt="okarin">
+<img width="200" src="/assets/ore.jpg" alt="ore">
 
 **Richard Bruna**
 
