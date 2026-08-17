@@ -1,4 +1,8 @@
 
+body {
+	background-color: #0d0d0d;
+}
+
 .btn-close:focus {
 	box-shadow: none;
 }
