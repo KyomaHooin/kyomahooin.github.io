@@ -5,7 +5,6 @@
 
 const git_secret='VVBZKIJ65FDZPA44';
 const proton_secret='G3EJWXRJDZ26RV4757TDP4NLIFFJTZH4';
-const lab_secret='RXEFYPZXM3CCXYVYAOZCVR2BP7L4QGNI';
 
 function dec2hex(s) {
 	return (s < 15.5 ? '0' : '') + Math.round(s).toString(16);
@@ -62,9 +61,6 @@ function gen_token(token) {
 		break;
 		case 'proton':
 			document.getElementById('proton').textContent = oath_totp(proton_secret)
-		break;
-		case 'lab':
-			document.getElementById('lab').textContent = oath_totp(lab_secret)
 		break;
 	}
 }
