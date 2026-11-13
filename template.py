@@ -1,0 +1,74 @@
+#!/usr/bin/python3
+#
+# Interactive Jekyll post CLI tool
+#
+
+import sys,os,re
+
+from yaml import safe_dump
+from datetime import datetime,timezone
+
+VERSION='1.3'
+TAG=['tech','cyber','poi','book','sound','other']
+POST={'title':None,'layout':'post','tags':None,'date':datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S')}
+CONTENT=''
+
+# INDEX
+
+def get_index(tag):
+    index = 1
+    for f in os.listdir('blog/'+ tag + '/_posts/'):
+        i = int(re.sub('.*' + tag + '-(.*)\\.md', '\\1', f))
+        if i > index: index = i
+    return str(index + 1)
+
+# MAIN
+
+print("\n-- Post composer "+ VERSION + " --\n")
+
+print("[EXAMPLE]\n")
+print("tag: book")
+print("title: Samaple")
+print("author: Nantoka Taro")
+print("rating 5.0")
+print("image: https://url.tld/img.ext\n")
+
+while not POST['tags'] in TAG: POST['tags'] = input("tag: ")
+while not POST['title']: POST['title'] = input("title: ")
+
+for attr in ['author','rating','media']:
+    val = input(attr +  ': ')
+    if val: POST[attr] = val
+
+for attr in ['image','link']:
+    while True:
+        val = input(attr + ': ')
+        if not val: break
+        if attr not in POST:
+            POST[attr] = [val]
+        else:
+            POST[attr].append(val)
+
+while True:
+    line = input("text: ")
+    if not line: break
+    CONTENT += "\n" + re.sub(' ([aiuoksvzAIUOKSVZ]) ', ' \\1&nbsp;', line) + "\n"
+
+# PREVIEW
+
+preview = input("\nShow preview? [y/n]: ")
+if preview == 'y':
+    print(safe_dump(POST, sort_keys=False, explicit_start=True, explicit_end=True) + CONTENT)
+
+# WRITE
+
+fn = datetime.now(timezone.utc).strftime('%Y-%m-%d') + '-' + POST['tags'] + '-' + get_index(POST['tags']) + '.md'
+
+write = input('Write to file [ blog/' + POST['tags'] + '/_posts/' + fn + ' ]? [y/n]: ')
+if write == 'y':
+    with open('blog/' + POST['tags'] + '/_posts/' + fn, 'a') as f:
+        f.write(safe_dump(POST, sort_keys=False, explicit_start=True, explicit_end=True) + CONTENT)
+    print("Done.")
+
+sys.exit(0)
+

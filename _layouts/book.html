@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{%- if site.categories.book.size > 0 -%}
+  <table class="table table-dark table-borderless table-sm">
+  <tbody>
+    {%- for post in site.categories.book -%}
+      {%- assign date_format = "%Y"-%}
+     <tr class="d-flex justify-content-start">
+	<td class="py-0 text-nowrap"> - [ {{ post.date | date: date_format }} ]</td>
+	<td class="py-0"><a class="post" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
+     </tr>
+    {%- endfor -%}
+  </tbody>
+  </table>
+{%- endif -%}
+
+<p>
+Andrew Stoker's <a href="/assets/back/AndrewStoker.html">book list</a><br>
+Sander van Zoest's <a href="/assets/back/SanderZoest/SanderZoest.html">book list</a><br>
+Jason Harrison's <a href="/assets/back/JasonHarrison.html">book list</a>
+</p>

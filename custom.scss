@@ -1,0 +1,47 @@
+---
+---
+
+$nav-pills-link-active-bg: #505050;
+$nav-pills-border-radius: .2rem;
+$nav-link-padding-y: .25rem;
+
+@import "bootstrap/scss/bootstrap.scss";
+
+a {
+        color: $light;
+}
+
+body {
+	background-color: #0d0d0d;
+}
+
+.table {
+	--bs-table-bg: #0d0d0d;
+}
+
+.nav {
+	@extend .border-start-0;
+	@extend .border-end-0;
+	@extend .border-dark-subtle;
+	@extend .border-1;
+	border-style: dashed;
+}
+
+.post {
+	@extend .link-light;
+	@extend .link-offset-3-hover;
+	@extend .link-underline;
+	@extend .link-underline-opacity-0;
+	@extend .link-underline-opacity-75-hover;
+}
+
+.pi {
+	@extend .border-start-0;
+	@extend .border-end-0;
+	@extend .border-bottom-0;
+	@extend .border-dark-subtle;
+	@extend .border-1;
+	border-style: dashed;
+	user-select: none;
+}
+

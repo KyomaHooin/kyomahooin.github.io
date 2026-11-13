@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% if page.media %}
+	<p class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/{{ page.media }}" allow="fullscreen"></iframe></p>
+{% endif %}
+
+{% if page.image %}
+	{% for img in page.image %}
+		{% assign img_name = img | split: "/" | last %}
+		<p><img style="max-height: 500px;" class="img-fluid d-flex flex-grow-1" onerror="this.onerror=null;this.src='/assets/no-image.svg';" src="{{ img }}" alt="{{ img_name }}"></p>
+	{% endfor %}
+{% endif %}
+
+{% if page.link %}
+	{% for link in page.link %}
+		<p><a href="{{ link }}">{{ link | remove: "https://" }}</a></p>
+	{% endfor %}
+{% endif %}
+
+{% if page.author %}
+	<p>作家: {{ page.author }}</p>
+{% endif %}
+
+{% if page.rating %}
+	<p>評点: {{ page.rating }}</p>
+{% endif %}
+
+<div style="hyphens: auto;">{{ content }}</div>
